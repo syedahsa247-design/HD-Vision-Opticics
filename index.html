@@ -1,449 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10243b">
-  <title>HD Vision Opticics – Taj Bagh, Lahore</title>
-  <meta name="description" content="Eye tests, glasses, lenses, frames and sunglasses from HD Vision Opticics in Taj Bagh, Lahore. Order on WhatsApp.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --ink: #10243b;
-      --glass: #e4f0f3;
-      --paper: #f7fafb;
-      --frame: #e9a23b;
-      --wa: #1faa59;
-      --muted: #52687d;
-      --line: #c9dbe1;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Sora, system-ui, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    :focus-visible {
-      outline: 3px solid var(--frame);
-      outline-offset: 3px;
-    }
-
-    .wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header {
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .bar {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 1.1rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
-
-    .logo span {
-      color: var(--frame);
-    }
-
-    .bar a.call {
-      padding: 6px 14px;
-      border: 1px solid #ffffff55;
-      border-radius: 99px;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    .hero {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 36px 20px 56px;
-    }
-
-    .chart {
-      color: #fff;
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: 0.12em;
-    }
-
-    .chart .r1 {
-      font-size: clamp(3.2rem, 16vw, 7.5rem);
-    }
-
-    .chart .r2 {
-      color: #ffffffcc;
-      font-size: clamp(2.2rem, 10vw, 4.5rem);
-    }
-
-    .chart .r3 {
-      color: #ffffff99;
-      font-size: clamp(1.4rem, 6vw, 2.6rem);
-    }
-
-    .chart .r4 {
-      color: #ffffff77;
-      font-size: clamp(0.9rem, 3.4vw, 1.4rem);
-    }
-
-    .hero p {
-      max-width: 46ch;
-      margin-top: 24px;
-      color: #d5e3ea;
-    }
-
-    .hero .btns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 22px;
-      border: 0;
-      border-radius: 99px;
-      font: 600 inherit Sora, sans-serif;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .btn.wa {
-      background: var(--wa);
-      color: #fff;
-    }
-
-    .btn.alt {
-      border: 1px solid #ffffff66;
-      background: transparent;
-      color: #fff;
-    }
-
-    .btn.dark {
-      background: var(--ink);
-      color: #fff;
-    }
-
-    section {
-      padding: 56px 0;
-    }
-
-    h2 {
-      margin-bottom: 6px;
-      font-size: 1.7rem;
-      font-weight: 800;
-    }
-
-    .sub {
-      margin-bottom: 28px;
-      color: var(--muted);
-    }
-
-    .menu {
-      border-top: 1px solid var(--line);
-      list-style: none;
-      padding: 0;
-    }
-
-    .menu li {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 4px 16px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .menu h3 {
-      font-size: 1.05rem;
-    }
-
-    .menu p {
-      grid-column: 1;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .menu .price {
-      grid-column: 2;
-      grid-row: 1;
-      color: var(--ink);
-      font-weight: 600;
-      text-align: right;
-    }
-
-    .menu button {
-      grid-column: 2;
-      grid-row: 2;
-      justify-self: end;
-      padding: 7px 16px;
-      border: 1px solid var(--line);
-      border-radius: 99px;
-      background: var(--glass);
-      color: var(--ink);
-      font: 600 0.85rem Sora, sans-serif;
-      cursor: pointer;
-    }
-
-    .menu button:hover {
-      border-color: var(--wa);
-      background: var(--wa);
-      color: #fff;
-    }
-
-    .order {
-      padding: 28px;
-      border-radius: 20px;
-      background: var(--glass);
-    }
-
-    .order p {
-      margin-bottom: 16px;
-    }
-
-    .map {
-      width: 100%;
-      height: 320px;
-      border: 0;
-      border-radius: 16px;
-      background: var(--glass);
-    }
-
-    .info {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .info b {
-      display: block;
-    }
-
-    footer {
-      padding: 24px 20px;
-      background: var(--ink);
-      color: #aebfcc;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-
-    .float {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 9;
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--wa);
-      box-shadow: 0 6px 18px #0004;
-    }
-
-    .float svg {
-      width: 30px;
-      height: 30px;
-      fill: #fff;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .bar {
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      .logo {
-        max-width: 190px;
-      }
-
-      .hero .btns,
-      .hero .btn {
-        width: 100%;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HD Vision Opticics – Taj Bagh, Lahore</title>
+<meta name="description" content="HD Vision Opticics, Taj Bagh Lahore. Eye test, glasses, lenses, frames, sunglasses. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10243b; --glass:#e4f0f3; --paper:#f7fafb; --frame:#e9a23b; --wa:#1faa59; --muted:#52687d;
+  --line:#c9dbe1;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Sora,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--frame);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{background:var(--ink);color:#fff}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:960px;margin:0 auto}
+.logo{font-weight:800;font-size:1.1rem;letter-spacing:.02em}
+.logo span{color:var(--frame)}
+.bar a.call{font-size:.9rem;text-decoration:none;border:1px solid #ffffff55;padding:6px 14px;border-radius:99px}
+.hero{padding:36px 20px 56px;max-width:960px;margin:0 auto}
+.chart{font-weight:800;line-height:1.05;letter-spacing:.12em;color:#fff}
+.chart .r1{font-size:clamp(3.2rem,16vw,7.5rem)}
+.chart .r2{font-size:clamp(2.2rem,10vw,4.5rem);color:#ffffffcc}
+.chart .r3{font-size:clamp(1.4rem,6vw,2.6rem);color:#ffffff99}
+.chart .r4{font-size:clamp(.9rem,3.4vw,1.4rem);color:#ffffff77}
+.hero p{margin-top:24px;max-width:46ch;color:#d5e3ea}
+.hero .btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.alt{background:transparent;color:#fff;border:1px solid #ffffff66}
+.btn.dark{background:var(--ink);color:#fff}
+section{padding:56px 0}
+h2{font-size:1.7rem;font-weight:800;margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:28px}
+.menu{list-style:none;padding:0;border-top:1px solid var(--line)}
+.menu li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.menu h3{font-size:1.05rem}
+.menu p{grid-column:1;font-size:.9rem;color:var(--muted)}
+.menu .price{font-weight:600;color:var(--ink);text-align:right}
+.menu button{grid-column:2;grid-row:2;justify-self:end;background:var(--glass);color:var(--ink);border:1px solid var(--line);padding:7px 16px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.menu button:hover{background:var(--wa);color:#fff;border-color:var(--wa)}
+.order{background:var(--glass);border-radius:20px;padding:28px}
+.order p{margin-bottom:10px}
+.order .row b{display:block;font-size:.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.order .row span,.order .row a{font-size:1.25rem;font-weight:800;text-decoration:none}
+.order .btn{margin-top:12px}
+.map{border:0;width:100%;height:320px;border-radius:16px;background:var(--glass)}
+.info{display:grid;gap:14px;margin-bottom:20px}
+.info b{display:block}
+footer{background:var(--ink);color:#aebfcc;text-align:center;padding:24px 20px;font-size:.85rem}
+.float{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 18px #0004;z-index:9}
+.float svg{width:30px;height:30px;fill:#fff}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="bar">
-      <div class="logo">HD <span>Vision</span> Opticics</div>
-      <a class="call" id="callLink" href="#">Call</a>
+
+<header>
+  <div class="bar">
+    <div class="logo">HD <span>Vision</span> Opticics</div>
+    <a class="call" id="callLink" href="#">Call karein</a>
+  </div>
+  <div class="hero">
+    <div class="chart" aria-label="HD Vision Opticics">
+      <div class="r1">HD</div>
+      <div class="r2">VISION</div>
+      <div class="r3">OPTICICS</div>
+      <div class="r4">TAJ BAGH · LAHORE</div>
     </div>
-
-    <div class="hero">
-      <div class="chart" aria-label="HD Vision Opticics">
-        <div class="r1">HD</div>
-        <div class="r2">VISION</div>
-        <div class="r3">OPTICICS</div>
-        <div class="r4">TAJ BAGH · LAHORE</div>
-      </div>
-
-      <p>Aankhon ka test, chashme aur lenses. Menu dekhein, WhatsApp par order karein.</p>
-
-      <div class="btns">
-        <a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp par order karein</a>
-        <a class="btn alt" href="#location">Dukaan ka rasta</a>
-      </div>
+    <p>Aankhon ka test, chashme aur lenses. Menu dekhein, WhatsApp par order karein.</p>
+    <div class="btns">
+      <a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp par order karein</a>
+      <a class="btn alt" href="#location">Dukaan ka rasta</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="wrap">
-    <section id="menu">
-      <h2>Menu</h2>
-      <p class="sub">Kisi bhi item ke saath “Order” dabayein, WhatsApp message khud ban jayega.</p>
-      <ul class="menu" id="menuList"></ul>
-    </section>
+<main class="wrap">
 
-    <section>
-      <div class="order">
-        <h2>Seedha WhatsApp par order</h2>
-        <p>Apna number (power), frame ka size ya koi bhi sawal bhej dein. Hum jald jawab denge.</p>
-        <a class="btn wa" id="orderWa" href="#" target="_blank" rel="noopener">WhatsApp kholein</a>
-      </div>
-    </section>
+<section id="menu">
+  <h2>Menu</h2>
+  <p class="sub">Kisi bhi item ke saath “Order” dabayein, WhatsApp message khud ban jayega.</p>
+  <ul class="menu" id="menuList"></ul>
+</section>
 
-    <section id="location">
-      <h2>Hamari dukaan</h2>
-      <p class="sub">HD Vision Opticics, Taj Bagh, Lahore</p>
+<section id="contact">
+  <div class="order">
+    <h2>Rabta karein</h2>
+    <p class="sub" style="margin-bottom:16px">Apna number (power), frame ka size ya koi bhi sawal bhej dein. Hum jald jawab denge.</p>
+    <p class="row"><b>Owner</b><span id="ownerName"></span></p>
+    <p class="row"><b>Phone / WhatsApp</b><a id="phoneLink" href="#"></a></p>
+    <a class="btn wa" id="orderWa" href="#" target="_blank" rel="noopener">WhatsApp kholein</a>
+  </div>
+</section>
 
-      <div class="info">
-        <div><b>Address</b>Taj Bagh, Lahore</div>
-        <div><b>Timing</b><span id="timing"></span></div>
-      </div>
+<section id="location">
+  <h2>Hamari dukaan</h2>
+  <p class="sub">HD Vision Opticics, Taj Bagh, Lahore</p>
+  <div class="info">
+    <div><b>Address</b>Taj Bagh, Lahore</div>
+    <div><b>Timing</b><span id="timing"></span></div>
+  </div>
+  <iframe class="map" title="HD Vision Opticics Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://maps.google.com/maps?q=HD%20Vision%20Opticics%20Taj%20Bagh%20Lahore&amp;output=embed"></iframe>
+  <p style="margin-top:16px"><a class="btn dark" id="mapLink" target="_blank" rel="noopener"
+    href="https://www.google.com/maps/search/?api=1&query=HD+Vision+Opticics+Taj+Bagh+Lahore">Google Maps mein kholein</a></p>
+</section>
 
-      <iframe
-        class="map"
-        title="HD Vision Opticics location"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=HD%20Vision%20Opticics%20Taj%20Bagh%20Lahore&amp;output=embed">
-      </iframe>
+</main>
 
-      <p style="margin-top:16px">
-        <a
-          class="btn dark"
-          id="mapLink"
-          target="_blank"
-          rel="noopener"
-          href="https://www.google.com/maps/search/?api=1&amp;query=HD+Vision+Opticics+Taj+Bagh+Lahore">
-          Google Maps mein kholein
-        </a>
-      </p>
-    </section>
-  </main>
+<footer>© HD Vision Opticics, Taj Bagh, Lahore · Syed Bilal · <span id="footPhone"></span></footer>
 
-  <footer>© <span id="year"></span> HD Vision Opticics, Taj Bagh, Lahore</footer>
+<a class="float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp par order karein">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9-3.1-1.3-5-4.5-5.2-4.7-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.300 1.7 2.100 1.100 1 2.100 1.300 2.400 1.500.3.1.5.1.6-.1l.9-1.100c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.500Z"/></svg>
+</a>
 
-  <a class="float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp par order karein">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9-3.1-1.3-5-4.5-5.2-4.7-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.5Z"/>
-    </svg>
-  </a>
+<script>
+/* ====== EDIT THESE ====== */
+var OWNER  = "Syed Bilal";
+var PHONE  = "923224377278";      // WhatsApp number (country code 92, no + or 0)
+var SHOWN  = "0322-4377278";      // number as shown on the page
+var TIMING = "Rozana 11 AM – 9 PM";  // shop timing (apna asli waqt likhein)
+var MENU = [
+  {name:"Computerized Eye Test",      desc:"Aankhon ka mukammal check-up",           price:""},
+  {name:"Single Vision Glasses",       desc:"Door ya nazdeek ki nazar ke liye",       price:""},
+  {name:"Progressive / Bifocal",       desc:"Ek hi chashme mein door aur nazdeek",    price:""},
+  {name:"Blue Light Lenses",           desc:"Mobile aur computer ke liye",            price:""},
+  {name:"Photochromic Lenses",         desc:"Dhoop mein khud dark ho jate hain",      price:""},
+  {name:"Frames (Metal / Plastic)",    desc:"Men, women aur kids ke frames",          price:""},
+  {name:"Contact Lenses",              desc:"Daily aur monthly lenses",               price:""},
+  {name:"Sunglasses",                  desc:"UV protection ke saath",                 price:""},
+  {name:"Repair & Adjustment",         desc:"Frame theek karwana, nose pad, screws",  price:""}
+];
+/* ======================== */
 
-  <script>
-    // ====== EDIT THESE ======
-    const PHONE = "923224377278";
-    const TIMING = "Rozana 8 AM – 10 PM";
-    const MENU = [
-      { Syed Bilal: "Computerized Eye Test", desc: "Aankhon ka mukammal check-up", price: "" },
-      { name: "Single Vision Glasses", desc: "Door ya nazdeek ki nazar ke liye", price: "" },
-      { name: "Progressive / Bifocal", desc: "Ek hi chashme mein door aur nazdeek", price: "" },
-      { name: "Blue Light Lenses", desc: "Mobile aur computer ke liye", price: "" },
-      { name: "Photochromic Lenses", desc: "Dhoop mein khud dark ho jate hain", price: "" },
-      { name: "Frames (Metal / Plastic)", desc: "Men, women aur kids ke frames", price: "" },
-      { name: "Contact Lenses", desc: "Daily aur monthly lenses", price: "" },
-      { name: "Sunglasses", desc: "UV protection ke saath", price: "" },
-      { name: "Repair & Adjustment", desc: "Frame theek karwana, nose pad, screws", price: "" }
-    ];
-    // ========================
+function wa(text){ return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text); }
+var hello = "Assalam o Alaikum, HD Vision Opticics. Mujhe order/inquiry karni hai.";
+["heroWa","orderWa","floatWa"].forEach(function(id){ document.getElementById(id).href = wa(hello); });
+document.getElementById("callLink").href = "tel:+" + PHONE;
+var pl = document.getElementById("phoneLink");
+pl.href = "tel:+" + PHONE; pl.textContent = SHOWN;
+document.getElementById("ownerName").textContent = OWNER;
+document.getElementById("footPhone").textContent = SHOWN;
+document.getElementById("timing").textContent = TIMING;
 
-    function wa(text) {
-      return `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
-    }
-
-    const hello = "Assalam o Alaikum, HD Vision Opticics. Mujhe order/inquiry karni hai.";
-
-    ["heroWa", "orderWa", "floatWa"].forEach(id => {
-      document.getElementById(id).href = wa(hello);
-    });
-
-    document.getElementById("callLink").href = `tel:+${PHONE}`;
-    document.getElementById("timing").textContent = TIMING;
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const ul = document.getElementById("menuList");
-
-    MENU.forEach(item => {
-      const li = document.createElement("li");
-
-      const heading = document.createElement("h3");
-      heading.textContent = item.name;
-
-      const price = document.createElement("span");
-      price.className = "price";
-      price.textContent = item.price || "Rate pooch lein";
-
-      const description = document.createElement("p");
-      description.textContent = item.desc;
-
-      const button = document.createElement("button");
-      button.type = "button";
-      button.textContent = "Order";
-      button.setAttribute("aria-label", `Order ${item.name} on WhatsApp`);
-      button.addEventListener("click", () => {
-        window.open(
-          wa(`Assalam o Alaikum, mujhe order karna hai: ${item.name}`),
-          "_blank",
-          "noopener,noreferrer"
-        );
-      });
-
-      li.append(heading, price, description, button);
-      ul.appendChild(li);
-    });
-  </script>
+var ul = document.getElementById("menuList");
+MENU.forEach(function(m){
+  var li = document.createElement("li");
+  var h = document.createElement("h3"); h.textContent = m.name;
+  var pr = document.createElement("span"); pr.className = "price"; pr.textContent = m.price || "Rate pooch lein";
+  var p = document.createElement("p"); p.textContent = m.desc;
+  var b = document.createElement("button"); b.type = "button"; b.textContent = "Order";
+  b.setAttribute("aria-label", "Order " + m.name + " on WhatsApp");
+  b.onclick = function(){ window.open(wa("Assalam o Alaikum, mujhe order karna hai: " + m.name), "_blank", "noopener"); };
+  li.appendChild(h); li.appendChild(pr); li.appendChild(p); li.appendChild(b);
+  ul.appendChild(li);
+});
+</script>
 </body>
 </html>
