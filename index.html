@@ -3,58 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a2a30">
 <title>HD Vision Opticics – Taj Bagh, Lahore</title>
 <meta name="description" content="HD Vision Opticics, Taj Bagh Lahore. Eye test, glasses, lenses, frames, sunglasses. Order on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
+/* ===== COLORS (sirf yahan se rang badlein) ===== */
 :root{
-  --ink:#10243b; --glass:#e4f0f3; --paper:#f7fafb; --frame:#e9a23b; --wa:#1faa59; --muted:#52687d;
-  --line:#c9dbe1;
+  --primary:#0b6e75;   /* main teal */
+  --dark:#0a2a30;      /* gehra rang */
+  --accent:#f2b134;    /* sunehri */
+  --bg:#fbf8f3;        /* page background */
+  --soft:#e3f1f1;
+  --text:#12292d;
+  --muted:#5b7276;
+  --line:#e6e0d4;
+  --wa:#1faa59;
 }
+/* Royal blue chahiye to: --primary:#1d4ed8; --dark:#0b1b4d; --accent:#f59e0b; */
+/* Maroon chahiye to:     --primary:#8b1e3f; --dark:#2a0a14; --accent:#e0b04a; */
+
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{font-family:Sora,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+body{font-family:Sora,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--frame);outline-offset:3px}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{background:var(--ink);color:#fff}
-.bar{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:960px;margin:0 auto}
-.logo{font-weight:800;font-size:1.1rem;letter-spacing:.02em}
-.logo span{color:var(--frame)}
-.bar a.call{font-size:.9rem;text-decoration:none;border:1px solid #ffffff55;padding:6px 14px;border-radius:99px}
-.hero{padding:36px 20px 56px;max-width:960px;margin:0 auto}
-.chart{font-weight:800;line-height:1.05;letter-spacing:.12em;color:#fff}
-.chart .r1{font-size:clamp(3.2rem,16vw,7.5rem)}
-.chart .r2{font-size:clamp(2.2rem,10vw,4.5rem);color:#ffffffcc}
-.chart .r3{font-size:clamp(1.4rem,6vw,2.6rem);color:#ffffff99}
-.chart .r4{font-size:clamp(.9rem,3.4vw,1.4rem);color:#ffffff77}
-.hero p{margin-top:24px;max-width:46ch;color:#d5e3ea}
-.hero .btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600}
-.btn.wa{background:var(--wa);color:#fff}
-.btn.alt{background:transparent;color:#fff;border:1px solid #ffffff66}
-.btn.dark{background:var(--ink);color:#fff}
-section{padding:56px 0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+/* header + hero */
+header{
+  color:#fff;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 88% 12%,#1f9aa2 0,transparent 42%),linear-gradient(160deg,var(--primary),var(--dark));
+}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:980px;margin:0 auto}
+.logo{font-weight:800;font-size:1.1rem}
+.logo span{color:var(--accent)}
+.bar a.call{font-size:.9rem;font-weight:600;text-decoration:none;background:#ffffff1f;border:1px solid #ffffff44;padding:7px 16px;border-radius:99px}
+.hero{padding:28px 20px 64px;max-width:980px;margin:0 auto;position:relative}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.hero h1{font-size:clamp(2.4rem,10vw,4.6rem);line-height:1.05;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin-top:18px;max-width:44ch;color:#d9ecee}
+.glasses{position:absolute;right:-30px;top:10px;width:min(300px,62vw);opacity:.16}
+.hero .btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:99px;font:inherit;font-weight:600;text-decoration:none;border:0;cursor:pointer}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 8px 20px #1faa5955}
+.btn.alt{background:transparent;color:#fff;border:1px solid #ffffff77}
+.btn.dark{background:var(--dark);color:#fff}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.chips span{font-size:.8rem;background:#ffffff1a;border:1px solid #ffffff33;padding:5px 12px;border-radius:99px}
+
+/* sections */
+section{padding:56px 0 8px}
 h2{font-size:1.7rem;font-weight:800;margin-bottom:6px}
-.sub{color:var(--muted);margin-bottom:28px}
-.menu{list-style:none;padding:0;border-top:1px solid var(--line)}
-.menu li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
-.menu h3{font-size:1.05rem}
-.menu p{grid-column:1;font-size:.9rem;color:var(--muted)}
-.menu .price{font-weight:600;color:var(--ink);text-align:right}
-.menu button{grid-column:2;grid-row:2;justify-self:end;background:var(--glass);color:var(--ink);border:1px solid var(--line);padding:7px 16px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
-.menu button:hover{background:var(--wa);color:#fff;border-color:var(--wa)}
-.order{background:var(--glass);border-radius:20px;padding:28px}
-.order p{margin-bottom:10px}
-.order .row b{display:block;font-size:.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
-.order .row span,.order .row a{font-size:1.25rem;font-weight:800;text-decoration:none}
-.order .btn{margin-top:12px}
-.map{border:0;width:100%;height:320px;border-radius:16px;background:var(--glass)}
-.info{display:grid;gap:14px;margin-bottom:20px}
-.info b{display:block}
-footer{background:var(--ink);color:#aebfcc;text-align:center;padding:24px 20px;font-size:.85rem}
-.float{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 18px #0004;z-index:9}
+h2::after{content:"";display:block;width:44px;height:4px;border-radius:4px;background:var(--accent);margin-top:8px}
+.sub{color:var(--muted);margin:12px 0 26px}
+
+/* menu cards */
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px;box-shadow:0 4px 14px #0a2a3010}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:1.4rem}
+.card h3{font-size:1.05rem;margin-top:6px}
+.card p{font-size:.9rem;color:var(--muted)}
+.card .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;gap:10px}
+.card .price{font-weight:800;color:var(--primary)}
+.card button{background:var(--primary);color:#fff;border:0;padding:9px 18px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.card button:hover{background:var(--wa)}
+
+/* contact */
+.contact{background:linear-gradient(160deg,var(--primary),var(--dark));color:#fff;border-radius:22px;padding:28px}
+.contact h2{margin-bottom:0}
+.contact .sub{color:#cfe6e8}
+.contact .row b{display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.contact .row{margin-bottom:12px}
+.contact .row span,.contact .row a{font-size:1.3rem;font-weight:800;text-decoration:none}
+.contact .btn{margin-top:6px}
+
+/* location */
+.map{border:0;width:100%;height:320px;border-radius:18px;background:var(--soft)}
+.info{display:grid;gap:12px;margin-bottom:18px}
+.info b{display:block;color:var(--primary)}
+footer{margin-top:56px;background:var(--dark);color:#a9c4c8;text-align:center;padding:26px 20px;font-size:.85rem}
+.float{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 22px #0005;z-index:9}
 .float svg{width:30px;height:30px;fill:#fff}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -67,17 +99,18 @@ footer{background:var(--ink);color:#aebfcc;text-align:center;padding:24px 20px;f
     <a class="call" id="callLink" href="#">Call karein</a>
   </div>
   <div class="hero">
-    <div class="chart" aria-label="HD Vision Opticics">
-      <div class="r1">HD</div>
-      <div class="r2">VISION</div>
-      <div class="r3">OPTICICS</div>
-      <div class="r4">TAJ BAGH · LAHORE</div>
-    </div>
-    <p>Aankhon ka test, chashme aur lenses. Menu dekhein, WhatsApp par order karein.</p>
+    <svg class="glasses" viewBox="0 0 300 120" fill="none" stroke="#fff" stroke-width="8" aria-hidden="true">
+      <circle cx="78" cy="62" r="52"/><circle cx="222" cy="62" r="52"/>
+      <path d="M130 56c14-10 26-10 40 0M26 50L4 36M274 50l22-14"/>
+    </svg>
+    <span class="tag">Taj Bagh · Lahore</span>
+    <h1>HD <em>Vision</em><br>Opticics</h1>
+    <p>Aankhon ka test, chashme aur lenses. Menu dekhein aur WhatsApp par order karein.</p>
     <div class="btns">
       <a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp par order karein</a>
       <a class="btn alt" href="#location">Dukaan ka rasta</a>
     </div>
+    <div class="chips"><span>Eye Test</span><span>Frames</span><span>Lenses</span><span>Sunglasses</span></div>
   </div>
 </header>
 
@@ -85,14 +118,14 @@ footer{background:var(--ink);color:#aebfcc;text-align:center;padding:24px 20px;f
 
 <section id="menu">
   <h2>Menu</h2>
-  <p class="sub">Kisi bhi item ke saath “Order” dabayein, WhatsApp message khud ban jayega.</p>
-  <ul class="menu" id="menuList"></ul>
+  <p class="sub">Kisi bhi item par “Order” dabayein, WhatsApp message khud ban jayega.</p>
+  <div class="grid" id="menuList"></div>
 </section>
 
 <section id="contact">
-  <div class="order">
+  <div class="contact">
     <h2>Rabta karein</h2>
-    <p class="sub" style="margin-bottom:16px">Apna number (power), frame ka size ya koi bhi sawal bhej dein. Hum jald jawab denge.</p>
+    <p class="sub">Apna number (power), frame ka size ya koi bhi sawal bhej dein. Hum jald jawab denge.</p>
     <p class="row"><b>Owner</b><span id="ownerName"></span></p>
     <p class="row"><b>Phone / WhatsApp</b><a id="phoneLink" href="#"></a></p>
     <a class="btn wa" id="orderWa" href="#" target="_blank" rel="noopener">WhatsApp kholein</a>
@@ -108,7 +141,7 @@ footer{background:var(--ink);color:#aebfcc;text-align:center;padding:24px 20px;f
   </div>
   <iframe class="map" title="HD Vision Opticics Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
     src="https://maps.google.com/maps?q=HD%20Vision%20Opticics%20Taj%20Bagh%20Lahore&amp;output=embed"></iframe>
-  <p style="margin-top:16px"><a class="btn dark" id="mapLink" target="_blank" rel="noopener"
+  <p style="margin-top:16px"><a class="btn dark" target="_blank" rel="noopener"
     href="https://www.google.com/maps/search/?api=1&query=HD+Vision+Opticics+Taj+Bagh+Lahore">Google Maps mein kholein</a></p>
 </section>
 
@@ -125,17 +158,17 @@ footer{background:var(--ink);color:#aebfcc;text-align:center;padding:24px 20px;f
 var OWNER  = "Syed Bilal";
 var PHONE  = "923224377278";      // WhatsApp number (country code 92, no + or 0)
 var SHOWN  = "0322-4377278";      // number as shown on the page
-var TIMING = "Rozana 11 AM – 9 PM";  // shop timing (apna asli waqt likhein)
+var TIMING = "Rozana 11 AM – 9 PM";  // apna asli waqt likhein
 var MENU = [
-  {name:"Computerized Eye Test",      desc:"Aankhon ka mukammal check-up",           price:""},
-  {name:"Single Vision Glasses",       desc:"Door ya nazdeek ki nazar ke liye",       price:""},
-  {name:"Progressive / Bifocal",       desc:"Ek hi chashme mein door aur nazdeek",    price:""},
-  {name:"Blue Light Lenses",           desc:"Mobile aur computer ke liye",            price:""},
-  {name:"Photochromic Lenses",         desc:"Dhoop mein khud dark ho jate hain",      price:""},
-  {name:"Frames (Metal / Plastic)",    desc:"Men, women aur kids ke frames",          price:""},
-  {name:"Contact Lenses",              desc:"Daily aur monthly lenses",               price:""},
-  {name:"Sunglasses",                  desc:"UV protection ke saath",                 price:""},
-  {name:"Repair & Adjustment",         desc:"Frame theek karwana, nose pad, screws",  price:""}
+  {icon:"👁️", name:"Computerized Eye Test",   desc:"Aankhon ka mukammal check-up",          price:""},
+  {icon:"👓", name:"Single Vision Glasses",    desc:"Door ya nazdeek ki nazar ke liye",      price:""},
+  {icon:"🔍", name:"Progressive / Bifocal",    desc:"Ek hi chashme mein door aur nazdeek",   price:""},
+  {icon:"💻", name:"Blue Light Lenses",        desc:"Mobile aur computer ke liye",           price:""},
+  {icon:"🌤️", name:"Photochromic Lenses",      desc:"Dhoop mein khud dark ho jate hain",     price:""},
+  {icon:"🖼️", name:"Frames (Metal / Plastic)", desc:"Men, women aur kids ke frames",         price:""},
+  {icon:"🔵", name:"Contact Lenses",           desc:"Daily aur monthly lenses",              price:""},
+  {icon:"🕶️", name:"Sunglasses",               desc:"UV protection ke saath",                price:""},
+  {icon:"🔧", name:"Repair & Adjustment",      desc:"Frame theek karwana, nose pad, screws", price:""}
 ];
 /* ======================== */
 
@@ -143,23 +176,25 @@ function wa(text){ return "https://wa.me/" + PHONE + "?text=" + encodeURICompone
 var hello = "Assalam o Alaikum, HD Vision Opticics. Mujhe order/inquiry karni hai.";
 ["heroWa","orderWa","floatWa"].forEach(function(id){ document.getElementById(id).href = wa(hello); });
 document.getElementById("callLink").href = "tel:+" + PHONE;
-var pl = document.getElementById("phoneLink");
-pl.href = "tel:+" + PHONE; pl.textContent = SHOWN;
+var pl = document.getElementById("phoneLink"); pl.href = "tel:+" + PHONE; pl.textContent = SHOWN;
 document.getElementById("ownerName").textContent = OWNER;
 document.getElementById("footPhone").textContent = SHOWN;
 document.getElementById("timing").textContent = TIMING;
 
-var ul = document.getElementById("menuList");
+var list = document.getElementById("menuList");
 MENU.forEach(function(m){
-  var li = document.createElement("li");
+  var c = document.createElement("div"); c.className = "card";
+  var ic = document.createElement("div"); ic.className = "ic"; ic.textContent = m.icon;
   var h = document.createElement("h3"); h.textContent = m.name;
-  var pr = document.createElement("span"); pr.className = "price"; pr.textContent = m.price || "Rate pooch lein";
   var p = document.createElement("p"); p.textContent = m.desc;
+  var row = document.createElement("div"); row.className = "row";
+  var pr = document.createElement("span"); pr.className = "price"; pr.textContent = m.price || "Rate pooch lein";
   var b = document.createElement("button"); b.type = "button"; b.textContent = "Order";
   b.setAttribute("aria-label", "Order " + m.name + " on WhatsApp");
   b.onclick = function(){ window.open(wa("Assalam o Alaikum, mujhe order karna hai: " + m.name), "_blank", "noopener"); };
-  li.appendChild(h); li.appendChild(pr); li.appendChild(p); li.appendChild(b);
-  ul.appendChild(li);
+  row.appendChild(pr); row.appendChild(b);
+  c.appendChild(ic); c.appendChild(h); c.appendChild(p); c.appendChild(row);
+  list.appendChild(c);
 });
 </script>
 </body>
