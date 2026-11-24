@@ -297,3 +297,30 @@ if(!SHOW_REVIEWS){$("reviews").style.display="none";$("nvRev").style.display="no
 else{
   if(!REVIEWS.length){var e=document.createElement("p");e.className="sub";e.textContent="Abhi koi review nahi. Pehla review aap likhein!";$("revList").appendChild(e)}
   REVIEWS.forEach(func
+                  <style>
+@media (scripting:none){#splash{display:none}}
+#splash .hint{margin-top:18px;font-size:.8rem;color:#a9b4cb}
+</style>
+<script>
+(function(){
+  var s=document.getElementById("splash");
+  if(!s)return;
+  var done=false;
+  function hide(){
+    if(done)return;done=true;
+    s.classList.add("hide");
+    setTimeout(function(){s.style.display="none"},600);
+    try{sessionStorage.setItem("hv","1")}catch(e){}
+  }
+  var h=document.createElement("p");
+  h.className="hint";
+  h.textContent="Kahin bhi tap karein, ya website 4 second mein khud khul jayegi";
+  var box=s.firstElementChild;
+  if(box)box.appendChild(h);
+  s.addEventListener("click",hide);
+  s.addEventListener("touchmove",hide,{passive:true});
+  s.addEventListener("wheel",hide,{passive:true});
+  document.addEventListener("keydown",hide);
+  setTimeout(hide,4000);
+})();
+</script>
