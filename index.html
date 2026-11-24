@@ -23,7 +23,7 @@ a{color:inherit}
 .nav .in{max-width:980px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
 .logo{font-weight:800;white-space:nowrap}.logo b{color:var(--yl)}
 .links{display:flex;gap:14px;overflow-x:auto;font-size:.85rem;font-weight:600}
-.links a{text-decoration:none;color:var(--mu);white-space:nowrap}.links a:hover{color:var(--yl)}
+.links a{text-decoration:none;color:var(--mu);white-space:nowrap}
 .hero{padding:44px 0 60px}
 .tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--yl);border-top:3px solid var(--rd);padding-top:8px}
 h1{font-size:clamp(2.6rem,11vw,5rem);line-height:1.04;font-weight:800;margin:12px 0}
@@ -47,7 +47,7 @@ h2::after{content:"";display:block;width:70px;height:4px;border-radius:4px;margi
 .art{height:120px;border-radius:14px;background:linear-gradient(135deg,#17306f,#7a1520);color:var(--yl);display:grid;place-items:center;overflow:hidden}
 .art svg{width:120px}.art img{width:100%;height:100%;object-fit:cover}
 .card h3{font-size:1.05rem}
-.card .cat{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bl);font-weight:600}
+.cat{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bl);font-weight:600}
 .card ul{padding-left:18px;font-size:.88rem;color:var(--mu)}
 .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:8px}
 .price{font-weight:800;color:var(--yl)}
@@ -66,7 +66,7 @@ textarea{min-height:90px;resize:vertical}
 .contact .r{margin-bottom:12px}
 .contact .r b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yl)}
 .contact .r span,.contact .r a{font-size:1.3rem;font-weight:800;text-decoration:none}
-.map{border:0;width:100%;height:320px;border-radius:18px;border:3px solid var(--ln);background:#111}
+.map{border:3px solid var(--ln);width:100%;height:320px;border-radius:18px;background:#111}
 .info{display:grid;gap:10px;margin-bottom:16px}.info b{color:var(--yl);display:block}
 footer{margin-top:56px;text-align:center;padding:24px 20px;font-size:.85rem;color:var(--mu);border-top:3px solid var(--rd)}
 .fab{position:fixed;bottom:16px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:0;cursor:pointer;z-index:30;box-shadow:0 8px 22px #0007}
@@ -75,7 +75,7 @@ footer{margin-top:56px;text-align:center;padding:24px 20px;font-size:.85rem;colo
 #chat{position:fixed;right:12px;bottom:84px;width:min(360px,calc(100vw - 24px));height:min(460px,70vh);background:#0c1122;border:1px solid var(--ln);border-radius:18px;z-index:31;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px #000a}
 #chat.open{display:flex}
 .ch{background:linear-gradient(90deg,var(--bl),var(--rd));padding:12px 16px;font-weight:700;display:flex;justify-content:space-between}
-.ch small{display:block;font-weight:400;opacity:.9}
+.ch small{display:block;font-weight:400}
 .ch button{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
 #msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
 .m{max-width:85%;padding:9px 13px;border-radius:14px;font-size:.9rem}
@@ -85,12 +85,16 @@ footer{margin-top:56px;text-align:center;padding:24px 20px;font-size:.85rem;colo
 .q button{background:transparent;border:1px solid var(--yl);color:var(--yl);padding:5px 11px;border-radius:99px;font:inherit;font-size:.78rem;cursor:pointer}
 .cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--ln)}
 .cf input{padding:9px 12px}.cf button{background:var(--yl);border:0;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
-#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(circle at 80% 10%,#e0212f55,transparent 40%),radial-gradient(circle at 10% 90%,#2563ff55,transparent 45%),#07080d;transition:opacity .5s}
-#splash.hide{opacity:0;pointer-events:none}
+/* welcome screen: 3.5 second baad khud band */
+#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(circle at 80% 10%,#e0212f55,transparent 40%),radial-gradient(circle at 10% 90%,#2563ff55,transparent 45%),#07080d;animation:sOut .6s ease 3.5s forwards}
+#splash.hide{animation:none;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s}
+@keyframes sOut{to{opacity:0;visibility:hidden;pointer-events:none}}
 #splash h1{font-size:clamp(2rem,9vw,3.4rem)}
 #splash .btns{justify-content:center}
 .b24{display:inline-block;margin-top:14px;font-size:.85rem;color:var(--yl);border:1px solid var(--yl);padding:4px 14px;border-radius:99px}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#splash{transition:none}}
+.hint{margin-top:18px;font-size:.8rem;color:var(--mu)}
+@media (scripting:none){#splash{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -117,6 +121,7 @@ footer{margin-top:56px;text-align:center;padding:24px 20px;font-size:.85rem;colo
       <button class="btn yl" id="sMenu">Menu dekhein</button>
       <a class="btn wa" id="sWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
     </div>
+    <p class="hint">Kahin bhi tap karein, ya website 3 second mein khud khul jayegi</p>
   </div>
 </div>
 
@@ -209,13 +214,25 @@ footer{margin-top:56px;text-align:center;padding:24px 20px;font-size:.85rem;colo
   <form class="cf" id="chatF"><input id="chatI" placeholder="Sawal likhein..." autocomplete="off"><button>Bhejein</button></form>
 </div>
 
+<!-- 1) Welcome screen band karne ka code (sab se pehle chalta hai) -->
+<script>
+(function(){
+  var s=document.getElementById("splash");
+  function hide(){s.classList.add("hide");setTimeout(function(){s.style.display="none"},600)}
+  s.addEventListener("click",hide);
+  s.addEventListener("touchmove",hide,{passive:true});
+  setTimeout(hide,3600);
+})();
+</script>
+
+<!-- 2) Baqi website ka code -->
 <script>
 /* ====== EDIT THESE ====== */
 var OWNER="Syed Bilal", PHONE="923224377278", SHOWN="0322-4377278";
-var TIMING="Rozana 11 AM – 9 PM";          // apna asli waqt likhein
-var SHOW_REVIEWS=true;                      // true = reviews nazar ayen, false = band
-var GOOGLE_FORM="";                         // optional: Google Form ka link (CV upload ke liye)
-var REVIEWS=[                               // approve kiye hue reviews yahan dalein
+var TIMING="Rozana subah 8 AM se raat 10 PM tak";
+var SHOW_REVIEWS=true;               // true = reviews nazar ayen, false = band
+var GOOGLE_FORM="";                  // optional: Google Form ka link
+var REVIEWS=[                        // approve kiye hue reviews yahan dalein
   // {n:"Ali", s:5, t:"Bohat acha experience."}
 ];
 var JOBS=[
@@ -223,7 +240,7 @@ var JOBS=[
   {t:"Eye Test Assistant",d:"Aankhon ke test mein madad"},
   {t:"Frame / Lens Fitter",d:"Chashme ki fitting aur repair"}
 ];
-/* price mein sirf number likhein, jaise p:"2500". Photo ke liye img:"images/frame1.jpg" */
+/* price mein sirf number likhein, jaise p:"2500". Photo: img:"images/frame1.jpg" */
 var MENU=[
   {c:"Eye Test",n:"Computerized Eye Test",d:["Nazar ka nambar (power) check","Dono aankhon ka mukammal test"],p:"",img:""},
   {c:"Frames",n:"Metal Frames",d:["Halke aur mazboot","Men aur women ke designs"],p:"",img:""},
@@ -246,12 +263,8 @@ var hello="Assalam o Alaikum, HD Vision Opticics. Mujhe order/inquiry karni hai.
 $("phoneLink").href="tel:+"+PHONE;$("phoneLink").textContent=SHOWN;
 $("ownerName").textContent=OWNER;$("footPhone").textContent=SHOWN;$("timing").textContent=TIMING;
 
-/* welcome screen */
-function closeSplash(){$("splash").classList.add("hide");try{sessionStorage.setItem("hv","1")}catch(e){}}
-try{if(sessionStorage.getItem("hv"))$("splash").classList.add("hide")}catch(e){}
-$("sMenu").onclick=function(){closeSplash();location.hash="menu"};
-$("sChat").onclick=function(){closeSplash();openChat()};
-$("sWa").addEventListener("click",closeSplash);
+$("sMenu").onclick=function(){location.hash="menu"};
+$("sChat").onclick=function(){openChat()};
 
 /* menu */
 function art(c){var s={
@@ -295,32 +308,35 @@ $("jobForm").onsubmit=function(e){e.preventDefault();
 /* reviews on/off */
 if(!SHOW_REVIEWS){$("reviews").style.display="none";$("nvRev").style.display="none"}
 else{
-  if(!REVIEWS.length){var e=document.createElement("p");e.className="sub";e.textContent="Abhi koi review nahi. Pehla review aap likhein!";$("revList").appendChild(e)}
-  REVIEWS.forEach(func
-                  <style>
-@media (scripting:none){#splash{display:none}}
-#splash .hint{margin-top:18px;font-size:.8rem;color:#a9b4cb}
-</style>
-<script>
-(function(){
-  var s=document.getElementById("splash");
-  if(!s)return;
-  var done=false;
-  function hide(){
-    if(done)return;done=true;
-    s.classList.add("hide");
-    setTimeout(function(){s.style.display="none"},600);
-    try{sessionStorage.setItem("hv","1")}catch(e){}
-  }
-  var h=document.createElement("p");
-  h.className="hint";
-  h.textContent="Kahin bhi tap karein, ya website 4 second mein khud khul jayegi";
-  var box=s.firstElementChild;
-  if(box)box.appendChild(h);
-  s.addEventListener("click",hide);
-  s.addEventListener("touchmove",hide,{passive:true});
-  s.addEventListener("wheel",hide,{passive:true});
-  document.addEventListener("keydown",hide);
-  setTimeout(hide,4000);
-})();
+  if(!REVIEWS.length){var em=document.createElement("p");em.className="sub";em.textContent="Abhi koi review nahi. Pehla review aap likhein!";$("revList").appendChild(em)}
+  REVIEWS.forEach(function(r){var d=document.createElement("div");d.className="rev";
+    var b=document.createElement("b");b.textContent="★".repeat(r.s)+"  "+r.n;var p=document.createElement("p");p.textContent=r.t;
+    d.appendChild(b);d.appendChild(p);$("revList").appendChild(d)});
+  $("revForm").onsubmit=function(e){e.preventDefault();
+    window.open(wa("Naya Review (approval ke liye)\nNaam: "+$("rn").value+"\nRating: "+$("rs").value+"/5\nReview: "+$("rt").value),"_blank","noopener")}}
+
+/* chat support */
+function openChat(){$("chat").classList.add("open")}
+$("chatB").onclick=function(){$("chat").classList.toggle("open")};
+$("chatX").onclick=function(){$("chat").classList.remove("open")};
+function say(t,who,link){var m=document.createElement("div");m.className="m "+who;m.textContent=t;
+  if(link){m.appendChild(document.createElement("br"));var a=document.createElement("a");a.href=wa(hello);a.target="_blank";a.rel="noopener";a.textContent="WhatsApp par baat karein";m.appendChild(a)}
+  $("msgs").appendChild(m);$("msgs").scrollTop=1e5}
+var FAQ=[
+ {k:["timing","waqt","time","khul","band","open"],a:function(){return "Dukaan ka waqt: "+TIMING}},
+ {k:["address","kahan","location","rasta","map","jagah"],a:function(){return "Hum Taj Bagh, Lahore mein hain. Neeche Map section mein rasta hai."}},
+ {k:["test","nazar","eye","check","power","nambar"],a:function(){return "Computerized eye test dukaan par hota hai. Aa kar apna test karwa lein."}},
+ {k:["price","rate","qeemat","kitne","paise","cost"],a:function(){return "Menu mein har cheez ka rate likha hai. Khaas frame ya lens ka rate WhatsApp par pooch lein."}},
+ {k:["order","chashma","frame","lens","buy","khareed"],a:function(){return "Menu mein se item chunein aur “Order” dabayein, ya WhatsApp par likh dein."}},
+ {k:["job","career","naukri","cv","apply"],a:function(){return "Careers section mein form bhar kar apply karein, phir CV WhatsApp par bhej dein."}},
+ {k:["number","phone","call","contact","owner"],a:function(){return "Owner: "+OWNER+", phone/WhatsApp: "+SHOWN}}];
+function ask(t){say(t,"u");var q=t.toLowerCase(),hit=null;
+  FAQ.forEach(function(f){if(!hit&&f.k.some(function(w){return q.indexOf(w)>-1}))hit=f});
+  setTimeout(function(){if(hit)say(hit.a(),"b");else say("Is sawal ka jawab owner dein ge. Barah-e-karam WhatsApp par likhein.","b",true)},400)}
+say("Assalam o Alaikum! HD Vision Opticics mein khush aamdeed. Main aap ki kya madad kar sakta hoon?","b");
+["Timing","Address","Eye test","Rate","Order","Job"].forEach(function(t){
+  var b=document.createElement("button");b.type="button";b.textContent=t;b.onclick=function(){ask(t)};$("quick").appendChild(b)});
+$("chatF").onsubmit=function(e){e.preventDefault();var v=$("chatI").value.trim();if(v){ask(v);$("chatI").value=""}};
 </script>
+</body>
+</html>
