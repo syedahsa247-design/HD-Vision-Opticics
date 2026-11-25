@@ -1,343 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#07080d">
-<title>HD Vision Opticics – Taj Bagh, Lahore</title>
-<meta name="google-site-verification" content="T-c40uCEuUQRdmmj43LQQNbVmsV-dTbSBlWf588ossQ" />
-  <meta name="description" content="HD Vision Opticics, Taj Bagh Lahore. Eye test, frames, lenses, sunglasses. Order on WhatsApp.">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<!-- ===== PAYMENT SECTION START ===== -->
 <style>
-:root{--bk:#07080d;--bl:#2563ff;--rd:#e0212f;--yl:#ffc928;--tx:#f3f6fc;--mu:#a9b4cb;--cd:#10162b;--ln:#25304f;--wa:#1faa59}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font-family:Sora,system-ui,sans-serif;background:var(--bk);color:var(--tx);line-height:1.6}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--yl);outline-offset:3px}
-.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(circle at 85% 8%,#e0212f38,transparent 38%),radial-gradient(circle at 5% 42%,#2563ff38,transparent 42%),radial-gradient(circle at 90% 92%,#ffc92824,transparent 35%),linear-gradient(180deg,#07080d,#0a1228 60%,#07080d)}
-.bg svg{position:absolute;color:#fff}
-.chart{right:-30px;top:70px;width:min(280px,66vw);opacity:.09}
-.lens{left:-90px;bottom:30px;width:min(380px,90vw);color:var(--yl);opacity:.09}
-.wrap{max-width:980px;margin:0 auto;padding:0 20px}
-.nav{position:sticky;top:0;z-index:20;background:#07080df0;backdrop-filter:blur(8px);border-bottom:2px solid;border-image:linear-gradient(90deg,var(--rd),var(--yl),var(--bl)) 1}
-.nav .in{max-width:980px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-.logo{font-weight:800;white-space:nowrap}.logo b{color:var(--yl)}
-.links{display:flex;gap:14px;overflow-x:auto;font-size:.85rem;font-weight:600}
-.links a{text-decoration:none;color:var(--mu);white-space:nowrap}
-.hero{padding:44px 0 60px}
-.tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--yl);border-top:3px solid var(--rd);padding-top:8px}
-h1{font-size:clamp(2.6rem,11vw,5rem);line-height:1.04;font-weight:800;margin:12px 0}
-h1 em{font-style:normal;color:var(--yl)}
-.hero p{max-width:44ch;color:var(--mu)}
-.btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:99px;font:inherit;font-weight:600;text-decoration:none;border:0;cursor:pointer;color:#fff}
-.btn.rd{background:var(--rd)}.btn.wa{background:var(--wa)}.btn.yl{background:var(--yl);color:#111}.btn.ol{border:1px solid #ffffff66;background:transparent}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
-.chips span{font-size:.78rem;border:1px solid var(--yl);color:var(--yl);padding:4px 12px;border-radius:99px}
-section{padding:54px 0 4px}
-h2{font-size:1.9rem;line-height:1.15}
-h2::after{content:"";display:block;width:70px;height:4px;border-radius:4px;margin-top:10px;background:linear-gradient(90deg,var(--rd),var(--yl),var(--bl))}
-.sub{color:var(--mu);margin:14px 0 22px}
-.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:4px}
-.tabs button{background:var(--cd);color:var(--mu);border:1px solid var(--ln);padding:8px 16px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
-.tabs button.on{background:var(--yl);color:#111;border-color:var(--yl)}
-.grid{display:grid;gap:14px;grid-template-columns:1fr}
-@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:var(--cd);border:1px solid var(--ln);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:8px}
-.art{height:120px;border-radius:14px;background:linear-gradient(135deg,#17306f,#7a1520);color:var(--yl);display:grid;place-items:center;overflow:hidden}
-.art svg{width:120px}.art img{width:100%;height:100%;object-fit:cover}
-.card h3{font-size:1.05rem}
-.cat{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bl);font-weight:600}
-.card ul{padding-left:18px;font-size:.88rem;color:var(--mu)}
-.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:8px}
-.price{font-weight:800;color:var(--yl)}
-.card button{background:var(--rd);color:#fff;border:0;padding:9px 20px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
-.panel{background:var(--cd);border:1px solid var(--ln);border-radius:20px;padding:22px}
-form{display:grid;gap:12px}
-label{font-size:.8rem;color:var(--mu);font-weight:600}
-input,select,textarea{width:100%;font:inherit;color:var(--tx);background:#0a0f20;border:1px solid var(--ln);border-radius:12px;padding:11px 14px}
-textarea{min-height:90px;resize:vertical}
-.jobs{display:grid;gap:10px;margin-bottom:18px}
-.job{border-left:4px solid var(--rd);background:var(--cd);padding:12px 16px;border-radius:0 12px 12px 0}
-.job b{display:block}.job span{font-size:.85rem;color:var(--mu)}
-.rev{border-left:4px solid var(--yl);background:var(--cd);padding:14px 16px;border-radius:0 14px 14px 0;margin-bottom:10px}
-.rev b{color:var(--yl)}
-.contact{background:linear-gradient(150deg,#0b1d4d,#1a0b12);border:1px solid var(--ln);border-radius:22px;padding:26px}
-.contact .r{margin-bottom:12px}
-.contact .r b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yl)}
-.contact .r span,.contact .r a{font-size:1.3rem;font-weight:800;text-decoration:none}
-.map{border:3px solid var(--ln);width:100%;height:320px;border-radius:18px;background:#111}
-.info{display:grid;gap:10px;margin-bottom:16px}.info b{color:var(--yl);display:block}
-footer{margin-top:56px;text-align:center;padding:24px 20px;font-size:.85rem;color:var(--mu);border-top:3px solid var(--rd)}
-.fab{position:fixed;bottom:16px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:0;cursor:pointer;z-index:30;box-shadow:0 8px 22px #0007}
-.fab svg{width:28px;height:28px;fill:#fff}
-#waF{left:16px;background:var(--wa)}#chatB{right:16px;background:var(--bl)}
-#chat{position:fixed;right:12px;bottom:84px;width:min(360px,calc(100vw - 24px));height:min(460px,70vh);background:#0c1122;border:1px solid var(--ln);border-radius:18px;z-index:31;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px #000a}
-#chat.open{display:flex}
-.ch{background:linear-gradient(90deg,var(--bl),var(--rd));padding:12px 16px;font-weight:700;display:flex;justify-content:space-between}
-.ch small{display:block;font-weight:400}
-.ch button{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
-#msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
-.m{max-width:85%;padding:9px 13px;border-radius:14px;font-size:.9rem}
-.m.b{background:#1a2342;align-self:flex-start}.m.u{background:var(--bl);align-self:flex-end}
-.m a{color:var(--yl)}
-.q{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 8px}
-.q button{background:transparent;border:1px solid var(--yl);color:var(--yl);padding:5px 11px;border-radius:99px;font:inherit;font-size:.78rem;cursor:pointer}
-.cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--ln)}
-.cf input{padding:9px 12px}.cf button{background:var(--yl);border:0;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
-/* welcome screen: 3.5 second baad khud band */
-#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(circle at 80% 10%,#e0212f55,transparent 40%),radial-gradient(circle at 10% 90%,#2563ff55,transparent 45%),#07080d;animation:sOut .6s ease 3.5s forwards}
-#splash.hide{animation:none;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s}
-@keyframes sOut{to{opacity:0;visibility:hidden;pointer-events:none}}
-#splash h1{font-size:clamp(2rem,9vw,3.4rem)}
-#splash .btns{justify-content:center}
-.b24{display:inline-block;margin-top:14px;font-size:.85rem;color:var(--yl);border:1px solid var(--yl);padding:4px 14px;border-radius:99px}
-.hint{margin-top:18px;font-size:.8rem;color:var(--mu)}
-@media (scripting:none){#splash{display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#payment{max-width:980px;margin:0 auto;padding:48px 20px;font-family:Sora,system-ui,sans-serif;color:#fff}
+#payment h2{font-size:2rem;font-weight:800;margin-bottom:6px}
+#payment .bar{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg,#e0212f,#ffc928,#2563ff);margin-bottom:14px}
+#payment .sub{color:#b8c0d8;margin-bottom:22px;line-height:1.6}
+#payment .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+#payment .card{background:var(--cd,#10162b);border:1px solid var(--ln,#25304f);border-radius:16px;padding:18px}
+#payment .card h3{font-size:1.1rem;margin-bottom:10px;color:#ffc928}
+#payment .lbl{font-size:.75rem;color:#8d97b5;margin-top:8px}
+#payment .val{font-weight:700;font-size:1rem}
+#payment .num{font-size:1.15rem;letter-spacing:1px}
+#payment button{margin-top:14px;width:100%;padding:11px;border:0;border-radius:999px;background:#2563ff;color:#fff;font-weight:700;font-family:inherit;font-size:.95rem;cursor:pointer}
+#payment button.done{background:#1faa59}
+#payment .note{margin-top:20px;padding:14px;border-radius:12px;border:1px dashed #25304f;color:#b8c0d8;font-size:.9rem;line-height:1.6}
 </style>
-</head>
-<body>
 
-<div class="bg" aria-hidden="true">
-  <svg class="chart" viewBox="0 0 300 520" fill="currentColor" font-family="Sora,sans-serif" font-weight="800" text-anchor="middle">
-    <text x="150" y="100" font-size="110">E</text><text x="150" y="190" font-size="80">F P</text>
-    <text x="150" y="260" font-size="56">T O Z</text><text x="150" y="315" font-size="40">L P E D</text>
-    <text x="150" y="360" font-size="28">P E C F D</text><text x="150" y="395" font-size="20">E D F C Z P</text>
-  </svg>
-  <svg class="lens" viewBox="0 0 300 120" fill="none" stroke="currentColor" stroke-width="7">
-    <circle cx="78" cy="62" r="52"/><circle cx="222" cy="62" r="52"/><path d="M130 56c14-10 26-10 40 0M26 50L4 36M274 50l22-14"/>
-  </svg>
-</div>
+<section id="payment">
+  <h2>Payment</h2>
+  <div class="bar"></div>
+  <p class="sub">Aap in mein se kisi bhi account mein payment bhej sakte hain. Payment karne ke baad screenshot WhatsApp par bhej dein.</p>
 
-<div id="splash">
-  <div>
-    <span class="tag">Taj Bagh · Lahore</span>
-    <h1>Welcome to<br><em>HD Vision Opticics</em></h1>
-    <p style="color:var(--mu);font-size:1.15rem">How can I help you?</p>
-    <span class="b24">Chat Support 24/7</span>
-    <div class="btns" style="margin-top:22px">
-      <button class="btn rd" id="sChat">Chat Support</button>
-      <button class="btn yl" id="sMenu">Menu dekhein</button>
-      <a class="btn wa" id="sWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <div class="grid">
+    <div class="card">
+      <h3>Easypaisa</h3>
+      <div class="lbl">Account Name</div>
+      <div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div>
+      <div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
     </div>
-    <p class="hint">Kahin bhi tap karein, ya website 3 second mein khud khul jayegi</p>
+
+    <div class="card">
+      <h3>JazzCash</h3>
+      <div class="lbl">Account Name</div>
+      <div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div>
+      <div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
+    </div>
+
+    <div class="card">
+      <h3>NayaPay</h3>
+      <div class="lbl">Account Name</div>
+      <div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div>
+      <div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
+    </div>
+
+    <div class="card">
+      <h3>SadaPay</h3>
+      <div class="lbl">Account Name</div>
+      <div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div>
+      <div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
+    </div>
   </div>
-</div>
 
-<div class="nav"><div class="in">
-  <div class="logo">HD <b>Vision</b> Opticics</div>
-  <div class="links"><a href="#menu">Menu</a><a href="#careers">Careers</a><a href="#reviews" id="nvRev">Reviews</a><a href="#contact">Contact</a></div>
-</div></div>
-
-<main class="wrap">
-<div class="hero">
-  <span class="tag">Eye Test · Frames · Lenses</span>
-  <h1>HD <em>Vision</em><br>Opticics</h1>
-  <p>Sahi nazar, sahi chashma. Menu dekhein aur WhatsApp par order karein.</p>
-  <div class="btns">
-    <a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp par order</a>
-    <a class="btn ol" href="#location">Dukaan ka rasta</a>
-  </div>
-  <div class="chips"><span>Computerized Eye Test</span><span>Frames</span><span>Lenses</span><span>Sunglasses</span></div>
-</div>
-
-<section id="menu">
-  <h2>Menu</h2>
-  <p class="sub">Har cheez ki detail, price aur “Order” ka button.</p>
-  <div class="tabs" id="tabs"></div>
-  <div class="grid" id="menuList"></div>
+  <div class="note">Payment bhejne se pehle account name <b>Syed Bilal Hussian</b> zaroor check kar lein.</div>
 </section>
 
-<section id="careers">
-  <h2>Careers</h2>
-  <p class="sub">HD Vision Opticics ke saath kaam karein. Form bharein, phir apna CV WhatsApp par bhej dein.</p>
-  <div class="jobs" id="jobList"></div>
-  <div class="panel">
-    <form id="jobForm">
-      <div><label for="jn">Poora naam</label><input id="jn" required></div>
-      <div><label for="jp">Phone number</label><input id="jp" type="tel" required></div>
-      <div><label for="jt">Job ka naam</label><select id="jt"></select></div>
-      <div><label for="je">Tajurba aur taleem</label><textarea id="je" required></textarea></div>
-      <button class="btn rd" type="submit">Apply karein</button>
-      <a class="btn yl" id="gForm" href="#" target="_blank" rel="noopener" style="display:none">CV upload karein (Google Form)</a>
-    </form>
-  </div>
-</section>
-
-<section id="reviews">
-  <h2>Customer Reviews</h2>
-  <p class="sub">Aap ka review owner ko jata hai. Approve hone par yahan nazar aata hai.</p>
-  <div id="revList"></div>
-  <div class="panel">
-    <form id="revForm">
-      <div><label for="rn">Aap ka naam</label><input id="rn" required></div>
-      <div><label for="rs">Rating</label><select id="rs"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></div>
-      <div><label for="rt">Review</label><textarea id="rt" required></textarea></div>
-      <button class="btn yl" type="submit">Review bhejein</button>
-    </form>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="contact">
-    <h2>Rabta karein</h2>
-    <p class="sub">Power, frame ka size ya koi bhi sawal bhej dein.</p>
-    <p class="r"><b>Owner</b><span id="ownerName"></span></p>
-    <p class="r"><b>Phone / WhatsApp</b><a id="phoneLink" href="#"></a></p>
-    <a class="btn wa" id="orderWa" href="#" target="_blank" rel="noopener">WhatsApp kholein</a>
-  </div>
-</section>
-
-<section id="location">
-  <h2>Hamari dukaan</h2>
-  <p class="sub">HD Vision Opticics, Taj Bagh, Lahore</p>
-  <div class="info"><div><b>Address</b>Taj Bagh, Lahore</div><div><b>Timing</b><span id="timing"></span></div></div>
-  <iframe class="map" title="HD Vision Opticics Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-    src="https://maps.google.com/maps?q=HD%20Vision%20Opticics%20Taj%20Bagh%20Lahore&amp;output=embed"></iframe>
-  <p style="margin-top:14px"><a class="btn rd" target="_blank" rel="noopener"
-    href="https://www.google.com/maps/search/?api=1&query=HD+Vision+Opticics+Taj+Bagh+Lahore">Google Maps mein kholein</a></p>
-</section>
-</main>
-
-<footer>© HD Vision Opticics, Taj Bagh, Lahore · Syed Bilal · <span id="footPhone"></span></footer>
-
-<a class="fab" id="waF" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9-3.1-1.3-5-4.5-5.2-4.7-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.5Z"/></svg>
-</a>
-<button class="fab" id="chatB" aria-label="Chat support"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></button>
-
-<div id="chat" role="dialog" aria-label="Chat support">
-  <div class="ch"><div>HD Vision Support<small>24/7 · turant jawab</small></div><button id="chatX" aria-label="Band karein">×</button></div>
-  <div id="msgs"></div>
-  <div class="q" id="quick"></div>
-  <form class="cf" id="chatF"><input id="chatI" placeholder="Sawal likhein..." autocomplete="off"><button>Bhejein</button></form>
-</div>
-
-<!-- 1) Welcome screen band karne ka code (sab se pehle chalta hai) -->
 <script>
-(function(){
-  var s=document.getElementById("splash");
-  function hide(){s.classList.add("hide");setTimeout(function(){s.style.display="none"},600)}
-  s.addEventListener("click",hide);
-  s.addEventListener("touchmove",hide,{passive:true});
-  setTimeout(hide,3600);
-})();
+function copyNum(btn,num){
+  var done=function(){
+    var old=btn.textContent;
+    btn.textContent="Copied ✓";
+    btn.classList.add("done");
+    setTimeout(function(){btn.textContent=old;btn.classList.remove("done")},1800);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(num).then(done).catch(done);
+  }else{
+    var t=document.createElement("textarea");
+    t.value=num;document.body.appendChild(t);t.select();
+    try{document.execCommand("copy")}catch(e){}
+    document.body.removeChild(t);done();
+  }
+}
 </script>
-
-<!-- 2) Baqi website ka code -->
-<script>
-/* ====== EDIT THESE ====== */
-var OWNER="Syed Bilal", PHONE="923224377278", SHOWN="0322-4377278";
-var TIMING="Rozana subah 8 AM se raat 10 PM tak";
-var SHOW_REVIEWS=true;               // true = reviews nazar ayen, false = band
-var GOOGLE_FORM="";                  // optional: Google Form ka link
-var REVIEWS=[                        // approve kiye hue reviews yahan dalein
-  // {n:"Ali", s:5, t:"Bohat acha experience."}
-];
-var JOBS=[
-  {t:"Sales Assistant",d:"Customers ko frames aur lenses dikhana"},
-  {t:"Eye Test Assistant",d:"Aankhon ke test mein madad"},
-  {t:"Frame / Lens Fitter",d:"Chashme ki fitting aur repair"}
-];
-/* price mein sirf number likhein, jaise p:"2500". Photo: img:"images/frame1.jpg" */
-var MENU=[
-  {c:"Eye Test",n:"Computerized Eye Test",d:["Nazar ka nambar (power) check","Dono aankhon ka mukammal test"],p:"",img:""},
-  {c:"Frames",n:"Metal Frames",d:["Halke aur mazboot","Men aur women ke designs"],p:"",img:""},
-  {c:"Frames",n:"Plastic / TR Frames",d:["Rangeen aur stylish","Rozana istemal ke liye"],p:"",img:""},
-  {c:"Frames",n:"Kids Frames",d:["Bachon ke liye naram aur mazboot"],p:"",img:""},
-  {c:"Lenses",n:"Single Vision Lenses",d:["Door ya nazdeek ki nazar ke liye"],p:"",img:""},
-  {c:"Lenses",n:"Progressive / Bifocal",d:["Ek hi chashme mein door aur nazdeek"],p:"",img:""},
-  {c:"Lenses",n:"Blue Light Lenses",d:["Mobile aur computer ke liye","Aankhon ko araam"],p:"",img:""},
-  {c:"Lenses",n:"Photochromic Lenses",d:["Dhoop mein khud dark ho jate hain"],p:"",img:""},
-  {c:"Sunglasses",n:"UV Sunglasses",d:["UV protection","Men aur women"],p:"",img:""},
-  {c:"Contacts",n:"Contact Lenses",d:["Daily aur monthly","Power ke saath"],p:"",img:""},
-  {c:"Repair",n:"Repair & Adjustment",d:["Frame seedha karwana","Nose pad aur screws"],p:"",img:""}
-];
-/* ======================== */
-
-var $=function(i){return document.getElementById(i)};
-function wa(t){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(t)}
-var hello="Assalam o Alaikum, HD Vision Opticics. Mujhe order/inquiry karni hai.";
-["heroWa","orderWa","waF","sWa"].forEach(function(i){$(i).href=wa(hello)});
-$("phoneLink").href="tel:+"+PHONE;$("phoneLink").textContent=SHOWN;
-$("ownerName").textContent=OWNER;$("footPhone").textContent=SHOWN;$("timing").textContent=TIMING;
-
-$("sMenu").onclick=function(){location.hash="menu"};
-$("sChat").onclick=function(){openChat()};
-
-/* menu */
-function art(c){var s={
- "Eye Test":'<path d="M6 40c18-26 90-26 108 0-18 26-90 26-108 0z"/><circle cx="60" cy="40" r="12"/>',
- Frames:'<circle cx="32" cy="40" r="20"/><circle cx="88" cy="40" r="20"/><path d="M52 36c6-5 10-5 16 0M12 34L3 28M108 34l9-6"/>',
- Lenses:'<circle cx="60" cy="40" r="28"/><circle cx="60" cy="40" r="13"/>',
- Sunglasses:'<circle cx="32" cy="42" r="20" fill="currentColor"/><circle cx="88" cy="42" r="20" fill="currentColor"/><path d="M52 38c6-5 10-5 16 0"/>',
- Contacts:'<path d="M20 50a40 34 0 0 1 80 0z"/><path d="M30 60h60"/>',
- Repair:'<path d="M28 62l36-36M58 18a16 16 0 0 1 22 22l-8-2-6-6z"/>'};
- return '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true">'+(s[c]||s.Frames)+'</svg>'}
-var cats=["Sab"];MENU.forEach(function(m){if(cats.indexOf(m.c)<0)cats.push(m.c)});
-function showMenu(f){
-  document.querySelectorAll("#tabs button").forEach(function(b){b.classList.toggle("on",b.textContent===f)});
-  var L=$("menuList");L.innerHTML="";
-  MENU.filter(function(m){return f==="Sab"||m.c===f}).forEach(function(m){
-    var c=document.createElement("div");c.className="card";
-    var a=document.createElement("div");a.className="art";
-    if(m.img){var im=document.createElement("img");im.src=m.img;im.alt=m.n;im.loading="lazy";a.appendChild(im)}else a.innerHTML=art(m.c);
-    var k=document.createElement("span");k.className="cat";k.textContent=m.c;
-    var h=document.createElement("h3");h.textContent=m.n;
-    var u=document.createElement("ul");m.d.forEach(function(x){var li=document.createElement("li");li.textContent=x;u.appendChild(li)});
-    var r=document.createElement("div");r.className="row";
-    var p=document.createElement("span");p.className="price";p.textContent=m.p?"Rs. "+m.p:"Rate pooch lein";
-    var b=document.createElement("button");b.textContent="Order";
-    b.onclick=function(){window.open(wa("Assalam o Alaikum, mujhe order karna hai: "+m.n),"_blank","noopener")};
-    r.appendChild(p);r.appendChild(b);
-    [a,k,h,u,r].forEach(function(x){c.appendChild(x)});L.appendChild(c)})}
-cats.forEach(function(t){var b=document.createElement("button");b.textContent=t;b.onclick=function(){showMenu(t)};$("tabs").appendChild(b)});
-showMenu("Sab");
-
-/* careers */
-JOBS.forEach(function(j){
-  var d=document.createElement("div");d.className="job";
-  var b=document.createElement("b");b.textContent=j.t;var s=document.createElement("span");s.textContent=j.d;
-  d.appendChild(b);d.appendChild(s);$("jobList").appendChild(d);
-  var o=document.createElement("option");o.textContent=j.t;$("jt").appendChild(o)});
-if(GOOGLE_FORM){$("gForm").href=GOOGLE_FORM;$("gForm").style.display="inline-flex"}
-$("jobForm").onsubmit=function(e){e.preventDefault();
-  window.open(wa("Job Application – HD Vision Opticics\nNaam: "+$("jn").value+"\nPhone: "+$("jp").value+"\nPosition: "+$("jt").value+"\nTajurba/Taleem: "+$("je").value+"\n(CV isi chat mein bhej raha/rahi hoon)"),"_blank","noopener")};
-
-/* reviews on/off */
-if(!SHOW_REVIEWS){$("reviews").style.display="none";$("nvRev").style.display="none"}
-else{
-  if(!REVIEWS.length){var em=document.createElement("p");em.className="sub";em.textContent="Abhi koi review nahi. Pehla review aap likhein!";$("revList").appendChild(em)}
-  REVIEWS.forEach(function(r){var d=document.createElement("div");d.className="rev";
-    var b=document.createElement("b");b.textContent="★".repeat(r.s)+"  "+r.n;var p=document.createElement("p");p.textContent=r.t;
-    d.appendChild(b);d.appendChild(p);$("revList").appendChild(d)});
-  $("revForm").onsubmit=function(e){e.preventDefault();
-    window.open(wa("Naya Review (approval ke liye)\nNaam: "+$("rn").value+"\nRating: "+$("rs").value+"/5\nReview: "+$("rt").value),"_blank","noopener")}}
-
-/* chat support */
-function openChat(){$("chat").classList.add("open")}
-$("chatB").onclick=function(){$("chat").classList.toggle("open")};
-$("chatX").onclick=function(){$("chat").classList.remove("open")};
-function say(t,who,link){var m=document.createElement("div");m.className="m "+who;m.textContent=t;
-  if(link){m.appendChild(document.createElement("br"));var a=document.createElement("a");a.href=wa(hello);a.target="_blank";a.rel="noopener";a.textContent="WhatsApp par baat karein";m.appendChild(a)}
-  $("msgs").appendChild(m);$("msgs").scrollTop=1e5}
-var FAQ=[
- {k:["timing","waqt","time","khul","band","open"],a:function(){return "Dukaan ka waqt: "+TIMING}},
- {k:["address","kahan","location","rasta","map","jagah"],a:function(){return "Hum Taj Bagh, Lahore mein hain. Neeche Map section mein rasta hai."}},
- {k:["test","nazar","eye","check","power","nambar"],a:function(){return "Computerized eye test dukaan par hota hai. Aa kar apna test karwa lein."}},
- {k:["price","rate","qeemat","kitne","paise","cost"],a:function(){return "Menu mein har cheez ka rate likha hai. Khaas frame ya lens ka rate WhatsApp par pooch lein."}},
- {k:["order","chashma","frame","lens","buy","khareed"],a:function(){return "Menu mein se item chunein aur “Order” dabayein, ya WhatsApp par likh dein."}},
- {k:["job","career","naukri","cv","apply"],a:function(){return "Careers section mein form bhar kar apply karein, phir CV WhatsApp par bhej dein."}},
- {k:["number","phone","call","contact","owner"],a:function(){return "Owner: "+OWNER+", phone/WhatsApp: "+SHOWN}}];
-function ask(t){say(t,"u");var q=t.toLowerCase(),hit=null;
-  FAQ.forEach(function(f){if(!hit&&f.k.some(function(w){return q.indexOf(w)>-1}))hit=f});
-  setTimeout(function(){if(hit)say(hit.a(),"b");else say("Is sawal ka jawab owner dein ge. Barah-e-karam WhatsApp par likhein.","b",true)},400)}
-say("Assalam o Alaikum! HD Vision Opticics mein khush aamdeed. Main aap ki kya madad kar sakta hoon?","b");
-["Timing","Address","Eye test","Rate","Order","Job"].forEach(function(t){
-  var b=document.createElement("button");b.type="button";b.textContent=t;b.onclick=function(){ask(t)};$("quick").appendChild(b)});
-$("chatF").onsubmit=function(e){e.preventDefault();var v=$("chatI").value.trim();if(v){ask(v);$("chatI").value=""}};
-</script>
-</body>
-</html>
+<!-- ===== PAYMENT SECTION END ===== -->
