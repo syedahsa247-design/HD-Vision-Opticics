@@ -1,176 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b2545">
+<title>HD Vision Opticics – Taj Bagh, Lahore</title>
+<meta name="description" content="HD Vision Opticics, Taj Bagh Lahore. Computerized eye test, har tarah ke frames, lenses, sunglasses. WhatsApp par order karein.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Optician","name":"HD Vision Opticics","telephone":"+923224377278","address":{"@type":"PostalAddress","streetAddress":"Taj Bagh, in front of Unique School","addressLocality":"Lahore","addressRegion":"Punjab","addressCountry":"PK"},"openingHours":"Mo-Su 08:00-22:00"}</script>
 <style>
-#chatB,#chat{display:none!important}
-.hv{max-width:980px;margin:48px auto 24px;padding:0 16px}
-.hv-box{background:#fff;color:#14213d;border-radius:24px;padding:26px;box-shadow:0 10px 30px #0003}
-.hv-box h2{font-size:1.8rem;margin:0 0 6px;color:#0b2545}
-.hv-box .s{color:#5a6b85;margin:0 0 18px}
-.hv-g{display:grid;gap:12px;grid-template-columns:1fr}
-@media(min-width:640px){.hv-g{grid-template-columns:1fr 1fr}}
-.hv-c{border:1px solid #e6dfce;border-radius:16px;overflow:hidden}
-.hv-c .h{padding:11px 14px;color:#fff;font-weight:800}
-.hv-c .b{padding:12px 14px;display:grid;gap:2px}
-.hv-c small{color:#5a6b85;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:6px}
-.hv-c b{font-size:1.08rem;color:#0b2545}
-.hv-c button{margin-top:10px;background:#faf7f0;border:1px solid #e6dfce;color:#0b2545;padding:9px;border-radius:12px;font:inherit;font-weight:600;cursor:pointer}
-.hv-n{background:#fff7e0;border:1px solid #d4af5a;border-radius:12px;padding:12px 14px;margin:14px 0;font-size:.9rem}
-.hv-b{display:inline-block;padding:12px 22px;border-radius:99px;background:#1faa59;color:#fff;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600}
-#hvBtn{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;border:0;cursor:pointer;background:#0b7f7a;display:grid;place-items:center;z-index:9999;box-shadow:0 8px 22px #0006}
-#hvBtn svg{width:28px;height:28px;fill:#fff}
-#hvBox{position:fixed;right:12px;bottom:84px;width:min(360px,calc(100vw - 24px));height:min(480px,72vh);background:#fff;color:#14213d;border:1px solid #e6dfce;border-radius:20px;z-index:10000;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px #0006;font-family:inherit}
-#hvBox.open{display:flex}
-#hvBox .ch{background:linear-gradient(90deg,#0b2545,#0b7f7a);color:#fff;padding:12px 16px;font-weight:700;display:flex;justify-content:space-between}
-#hvBox .ch small{display:block;font-weight:400}
-#hvBox .ch button{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
-#hvMsgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:#faf7f0}
-.hv-m{max-width:88%;padding:9px 13px;border-radius:14px;font-size:.9rem;white-space:pre-line}
-.hv-m.b{background:#fff;border:1px solid #e6dfce;align-self:flex-start}
-.hv-m.u{background:#0b2545;color:#fff;align-self:flex-end}
-.hv-m a{color:#0b7f7a;font-weight:600}
-#hvQ{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px}
-#hvQ button{background:#fff;border:1px solid #0b7f7a;color:#0b7f7a;padding:5px 11px;border-radius:99px;font:inherit;font-size:.78rem;cursor:pointer}
-#hvF{display:flex;gap:8px;padding:10px;border-top:1px solid #e6dfce}
-#hvF input{flex:1;font:inherit;border:1px solid #e6dfce;border-radius:12px;padding:9px 12px;color:#14213d;background:#fff}
-#hvF button{background:#0b2545;color:#fff;border:0;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
+:root{--nv:#0b2545;--n2:#13406e;--tl:#0b7f7a;--gd:#d4af5a;--iv:#faf7f0;--tx:#14213d;--mu:#5a6b85;--ln:#e6dfce;--wa:#1faa59}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font:400 16px/1.6 Sora,system-ui,sans-serif;background:var(--iv);color:var(--tx)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gd);outline-offset:3px}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+nav .w{display:flex;align-items:center;gap:16px;padding-top:10px;padding-bottom:10px}
+.lg{font-weight:800;color:var(--nv);white-space:nowrap;text-decoration:none}
+.lk{display:flex;gap:16px;overflow-x:auto;font-size:.85rem;font-weight:600;scrollbar-width:none}
+.lk a{text-decoration:none;color:var(--mu);white-space:nowrap}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(150deg,var(--nv),var(--n2) 65%,#0e5a66)}
+.hero .bgm{position:absolute;right:-60px;top:6px;width:min(440px,100vw);opacity:.14;color:#fff}
+.hero .w{position:relative;padding-top:46px;padding-bottom:58px}
+.tag{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gd);border-top:3px solid var(--gd);padding-top:8px}
+h1{font-size:clamp(2.4rem,10vw,4.4rem);line-height:1.06;font-weight:800;margin:14px 0}
+.hero p{max-width:44ch;color:#cfdcea}
+.bt{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:99px;font:inherit;font-weight:600;text-decoration:none;border:0;cursor:pointer;color:#fff}
+.btn.wa{background:var(--wa)}.btn.tl{background:var(--tl)}.btn.gd{background:var(--gd);color:#1a1405}.btn.ol{border:1px solid #ffffff99}.btn.nv{background:var(--nv)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.chips span{font-size:.78rem;border:1px solid #ffffff55;padding:4px 13px;border-radius:99px;color:#e5eef7}
+section{padding:56px 0 4px}
+h2{font-size:1.9rem;line-height:1.15;color:var(--nv)}
+h2::after{content:"";display:block;width:60px;height:4px;border-radius:4px;margin-top:10px;background:linear-gradient(90deg,var(--tl),var(--gd))}
+.sub{color:var(--mu);margin:14px 0 22px}
+.eye{display:grid;gap:22px;align-items:center}
+@media(min-width:700px){.eye{grid-template-columns:1fr 1fr}}
+.mach{background:linear-gradient(135deg,var(--nv),var(--tl));border-radius:24px;padding:22px;color:var(--gd)}
+.mach svg{width:100%;display:block}
+.eye ul{padding-left:20px;margin-bottom:18px;color:var(--mu)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:4px}
+.tabs button{background:#fff;color:var(--mu);border:1px solid var(--ln);padding:8px 16px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.tabs button.on{background:var(--nv);color:#fff;border-color:var(--nv)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card,.pc,.panel,.job{background:#fff;border:1px solid var(--ln);border-radius:20px;box-shadow:0 8px 22px #0b25450d}
+.card{padding:14px;display:flex;flex-direction:column;gap:8px}
+.art{height:120px;border-radius:14px;background:linear-gradient(135deg,var(--nv),var(--tl));color:var(--gd);display:grid;place-items:center;overflow:hidden}
+.art svg{width:130px}.art img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:1.05rem;color:var(--nv)}
+.cat,.pc small{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tl);font-weight:600}
+.card ul{padding-left:18px;font-size:.88rem;color:var(--mu)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:8px}
+.price{font-weight:800;color:var(--tl)}
+.card button{background:var(--wa);color:#fff;border:0;padding:9px 18px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.steps{display:grid;gap:10px;margin-bottom:18px;counter-reset:s}
+@media(min-width:700px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps div{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:14px;font-size:.88rem;color:var(--mu);counter-increment:s}
+.steps div::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gd);color:#1a1405;font-weight:800;margin-bottom:8px}
+.steps b{display:block;color:var(--nv)}
+.pays{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.pays{grid-template-columns:1fr 1fr}}
+.pc{overflow:hidden}
+.pc .hd{padding:12px 16px;color:#fff;font-weight:800}
+.pc .bd{padding:14px 16px;display:grid;gap:2px}
+.pc small{margin-top:6px;color:var(--mu)}
+.pc b{font-size:1.1rem;color:var(--nv)}
+.pc button{margin-top:10px;background:var(--iv);border:1px solid var(--ln);color:var(--nv);padding:9px;border-radius:12px;font:inherit;font-weight:600;cursor:pointer}
+.note{background:#fff7e0;border:1px solid var(--gd);border-radius:14px;padding:14px 16px;margin:16px 0;font-size:.9rem}
+.job{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;margin-bottom:10px;flex-wrap:wrap}
+.job b{display:block;color:var(--nv)}.job span{font-size:.85rem;color:var(--mu)}
+.job button{background:var(--tl);color:#fff;border:0;padding:10px 20px;border-radius:99px;font:inherit;font-weight:600;cursor:pointer}
+.panel{padding:22px}
+form{display:grid;gap:12px}
+label{font-size:.8rem;color:var(--mu);font-weight:600}
+input,textarea{width:100%;font:inherit;color:var(--tx);background:var(--iv);border:1px solid var(--ln);border-radius:12px;padding:11px 14px}
+textarea{min-height:90px;resize:vertical}
+.stars{display:flex;gap:4px}
+.stars button{background:none;border:0;font-size:2rem;line-height:1;color:#cfc7b3;cursor:pointer;padding:0 2px}
+.stars button.on{color:var(--gd)}
+.avg{font-size:1.1rem;font-weight:800;color:var(--nv);margin-bottom:12px}
+.rev{border-left:4px solid var(--gd);background:#fff;padding:14px 16px;border-radius:0 14px 14px 0;margin-bottom:10px}
+.rev b{color:var(--nv)}.rev i{color:var(--gd);font-style:normal}
+.loc{display:grid;gap:18px}
+@media(min-width:760px){.loc{grid-template-columns:1fr 1.3fr}}
+.ct{background:linear-gradient(150deg,var(--nv),var(--n2));color:#fff;border-radius:24px;padding:26px}
+.ct h3{margin-bottom:10px}
+.ct p{margin-bottom:12px;color:#d6e2ef}
+.ct b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gd)}
+.ct .bt{margin-top:16px}
+.map{border:4px solid #fff;width:100%;height:100%;min-height:300px;border-radius:20px;background:#ddd;box-shadow:0 10px 26px #0b254522}
+footer{margin-top:56px;background:var(--nv);color:#b9c8dc;text-align:center;padding:26px 20px;font-size:.85rem;border-top:4px solid var(--gd)}
+.fab{position:fixed;bottom:16px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:0;cursor:pointer;z-index:30;box-shadow:0 8px 22px #0b254566}
+.fab svg{width:28px;height:28px;fill:#fff}
+#waF{left:16px;background:var(--wa)}#chB{right:16px;background:var(--tl)}
+#chat{position:fixed;right:12px;bottom:84px;width:min(360px,calc(100vw - 24px));height:min(480px,72vh);background:#fff;border:1px solid var(--ln);border-radius:20px;z-index:31;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px #0b254544}
+#chat.open{display:flex}
+.ch{background:linear-gradient(90deg,var(--nv),var(--tl));color:#fff;padding:12px 16px;font-weight:700;display:flex;justify-content:space-between}
+.ch small{display:block;font-weight:400}
+.ch button{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
+#msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:var(--iv)}
+.m{max-width:88%;padding:9px 13px;border-radius:14px;font-size:.9rem;white-space:pre-line}
+.m.b{background:#fff;border:1px solid var(--ln);align-self:flex-start}.m.u{background:var(--nv);color:#fff;align-self:flex-end}
+.m a{color:var(--tl);font-weight:600}
+.q{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px}
+.q button{background:#fff;border:1px solid var(--tl);color:var(--tl);padding:5px 11px;border-radius:99px;font:inherit;font-size:.78rem;cursor:pointer}
+.cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--ln)}
+.cf input{padding:9px 12px}.cf button{background:var(--nv);color:#fff;border:0;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+</head>
+<body>
+
+<nav><div class="w">
+  <a class="lg" href="#top" data-b>HD Vision Opticics</a>
+  <div class="lk"><a href="#eyetest">Eye Test</a><a href="#menu">Menu</a><a href="#payment">Payment</a><a href="#careers">Careers</a><a href="#reviews" id="nvR">Reviews</a><a href="#location">Location</a></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <svg class="bgm" viewBox="0 0 300 240" fill="none" stroke="currentColor" stroke-width="5" aria-hidden="true">
+    <g class="mc"></g>
+  </svg>
+  <div class="w">
+    <span class="tag">Taj Bagh · Lahore · Punjab</span>
+    <h1 data-b>HD Vision Opticics</h1>
+    <p>Computerized eye test, har tarah ke frames aur lenses. Menu se item chunein, WhatsApp par order khud ban jayega.</p>
+    <div class="bt">
+      <a class="btn wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp par order</a>
+      <a class="btn ol" data-call href="#">Call karein</a>
+    </div>
+    <div class="chips"><span>Eye Test</span><span>Frames</span><span>Lenses</span><span>Sunglasses</span><span>Contact Lenses</span></div>
+  </div>
+</header>
+
+<main class="w">
+
+<section id="eyetest">
+  <h2>Computerized Eye Test</h2>
+  <p class="sub">Sahi nambar ke bagair sahi chashma nahi banta.</p>
+  <div class="eye">
+    <div class="mach"><svg viewBox="0 0 300 240" fill="none" stroke="currentColor" stroke-width="5"><g class="mc"></g></svg></div>
+    <div>
+      <ul><li>Nazar ka nambar (power) check</li><li>Dono aankhon ka alag alag test</li><li>Bachon aur bare, sab ke liye</li><li>Test ke baad frame aur lens ka mashwara</li></ul>
+      <a class="btn wa" id="etB" href="#" target="_blank" rel="noopener">Eye test ke liye WhatsApp karein</a>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Menu</h2>
+  <p class="sub">“Order” dabate hi WhatsApp par us cheez ka message khud bhar jayega.</p>
+  <div class="tabs" id="tabs"></div>
+  <div class="grid" id="list"></div>
+</section>
+
+<section id="payment">
+  <h2>Payment</h2>
+  <p class="sub">Aasan aur mehfooz payment ka tareeqa.</p>
+  <div class="steps">
+    <div><b>Order chunein</b>Menu se item chunein, WhatsApp par message jayega.</div>
+    <div><b>Confirm karwayein</b>Hum availability aur total hisab bata dein ge.</div>
+    <div><b>Payment bhejein</b>Neeche diye account mein ya dukaan par aa kar.</div>
+    <div><b>Screenshot bhejein</b>WhatsApp par screenshot bhej dein, order pakka.</div>
+  </div>
+  <div class="pays" id="pays"></div>
+  <div class="note"><b>Zaroori:</b> Payment se pehle WhatsApp par order confirm karwa lein. Account ka naam <b id="accN"></b> hi hona chahiye. Naam alag nazar aaye to payment na bhejein, pehle call karein.</div>
+  <a class="btn wa" id="payB" href="#" target="_blank" rel="noopener">Payment ka screenshot bhejein</a>
+</section>
+
+<section id="careers">
+  <h2>Careers</h2>
+  <p class="sub">Hamari team ka hissa banein. “Apply” dabayein, phir apna CV WhatsApp par bhej dein.</p>
+  <div id="jobs"></div>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="avg" id="avg"></div>
+  <div id="revs"></div>
+  <div class="panel">
+    <form id="rf">
+      <div><label>Aap ka naam</label><input id="rn" required></div>
+      <div><label>Rating (1 se 5 star)</label><div class="stars" id="st"></div></div>
+      <div><label>Review</label><textarea id="rt" required></textarea></div>
+      <button class="btn nv" type="submit">Review bhejein</button>
+    </form>
+  </div>
+</section>
+
+<section id="location">
+  <h2>Hamari dukaan</h2>
+  <p class="sub">Taj Bagh, Lahore, Punjab, Pakistan</p>
+  <div class="loc">
+    <div class="ct">
+      <h3 data-b>HD Vision Opticics</h3>
+      <p><b>Address</b>Taj Bagh, Unique School ke saamne, Lahore, Punjab, Pakistan</p>
+      <p><b>Owner</b>Syed Muhammad Bilal</p>
+      <p><b>Phone / WhatsApp</b><a id="ph" href="#"></a></p>
+      <p><b>Timing</b><span id="tm"></span></p>
+      <div class="bt">
+        <a class="btn wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp Chat Support</a>
+        <a class="btn gd" data-call href="#">Call karein</a>
+      </div>
+      <div class="bt"><a class="btn ol" id="mp" href="#" target="_blank" rel="noopener">Google Maps mein kholein</a></div>
+    </div>
+    <iframe class="map" id="mf" title="HD Vision Opticics Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>© <span data-b>HD Vision Opticics</span> · Taj Bagh, Lahore, Punjab, Pakistan · <span id="fp"></span></footer>
+
+<a class="fab" id="waF" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9-3.1-1.3-5-4.5-5.2-4.7-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.5Z"/></svg>
+</a>
+<button class="fab" id="chB" aria-label="Assistant"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></button>
+<div id="chat" role="dialog" aria-label="Assistant">
+  <div class="ch"><div>HD Vision Assistant<small>24/7 · turant jawab</small></div><button id="chX" aria-label="Band karein">×</button></div>
+  <div id="msgs"></div><div class="q" id="qk"></div>
+  <form class="cf" id="cf"><input id="ci" placeholder="Apna sawal likhein..." autocomplete="off"><button>Bhejein</button></form>
+</div>
 
 <script>
-(function(){
-var NAME="Syed Bilal Hussian",NO="03224377278";
+/* ====== EDIT THESE ====== */
+var BRAND="HD Vision Opticics", OWNER="Syed Muhammad Bilal";
+var PHONE="923224377278", SHOWN="+92 322 4377278";
+var TIMING="Rozana subah 8 AM se raat 10 PM tak";
+var ADDR="Taj Bagh, Unique School ke saamne, Lahore";
+var MAPQ="HD Vision Opticics Unique School Taj Bagh Lahore"; // exact pin ke liye Google Maps ka embed link neeche MAPSRC mein dalein
+var MAPSRC="";
+var SHOW_REVIEWS=true;               // true = reviews nazar ayen, false = band
+var ACC="Syed Bilal Hussian", NO="03224377278";
 var PAYS=[["Easypaisa","#2e9e4f"],["JazzCash","#d71920"],["SadaPay","#0e9f8a"],["NayaPay","#5b2bd6"]];
-function G(n,d){return typeof window[n]!=="undefined"?window[n]:d}
-var BRAND=G("BRAND","HD Vision Opticics"),PHONE=G("PHONE","923224377278"),SHOWN=G("SHOWN","0322-4377278"),
-TIMING=G("TIMING","Rozana subah 8 AM se raat 10 PM tak"),OWNER=G("OWNER","Syed Bilal"),MENU=G("MENU",[]);
-function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
-function w(t){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(t)}
+var REVIEWS=[ /* approve kiye hue reviews: {n:"Ali", s:5, t:"Bohat acha experience."} */ ];
+var JOBS=[
+  {t:"Sales Assistant",d:"Customers ko frames aur lenses dikhana"},
+  {t:"Eye Test Assistant",d:"Aankhon ke test mein madad"},
+  {t:"Frame / Lens Fitter",d:"Chashme ki fitting aur repair"}
+];
+/* price mein sirf number likhein, jaise p:"2500". Asli photo: img:"images/frame1.jpg". a = tasveer ka design */
+var MENU=[
+ {c:"Eye Test",n:"Computerized Eye Test",a:"mach",d:["Nazar ka nambar (power) check","Dono aankhon ka mukammal test"],p:""},
+ {c:"Frames",n:"Metal Full Rim Frame",a:"square",d:["Halka aur mazboot","Rozana istemal ke liye"],p:""},
+ {c:"Frames",n:"Plastic / Acetate Frame",a:"square",d:["Rangeen aur stylish","Men aur women"],p:""},
+ {c:"Frames",n:"TR90 Flexible Frame",a:"round",d:["Lachakdar aur bohat halka","Toot-phoot se mehfooz"],p:""},
+ {c:"Frames",n:"Rimless Frame",a:"rimless",d:["Bagair kinare ka halka look","Professional andaz"],p:""},
+ {c:"Frames",n:"Half Rim Frame",a:"half",d:["Upar se rim, neeche se khula","Office aur rozana"],p:""},
+ {c:"Frames",n:"Aviator Frame",a:"aviator",d:["Classic teardrop shape","Men aur women"],p:""},
+ {c:"Frames",n:"Round Retro Frame",a:"round",d:["Gol shape, purana andaz","Stylish look"],p:""},
+ {c:"Frames",n:"Cat-Eye Frame",a:"cat",d:["Khawateen ke liye khaas","Fashion look"],p:""},
+ {c:"Frames",n:"Sports / Wrap Frame",a:"sport",d:["Mazboot grip","Khelne aur safar ke liye"],p:""},
+ {c:"Frames",n:"Kids Frame",a:"kid",d:["Bachon ke liye naram aur mazboot","Rangeen designs"],p:""},
+ {c:"Frames",n:"Titanium Frame",a:"square",d:["Bohat halka aur mazboot","Der tak chalne wala"],p:""},
+ {c:"Lenses",n:"Single Vision Lenses",a:"lens",d:["Door ya nazdeek ki nazar ke liye"],p:""},
+ {c:"Lenses",n:"Progressive / Bifocal",a:"lens",d:["Ek hi chashme mein door aur nazdeek"],p:""},
+ {c:"Lenses",n:"Blue Light Lenses",a:"lens",d:["Mobile aur computer ke liye","Aankhon ko araam"],p:""},
+ {c:"Lenses",n:"Photochromic Lenses",a:"lens",d:["Dhoop mein khud dark ho jate hain"],p:""},
+ {c:"Lenses",n:"Anti-Glare Coating",a:"lens",d:["Chamak aur reflection kam","Raat ko drive mein madadgar"],p:""},
+ {c:"Sunglasses",n:"UV Sunglasses",a:"sun",d:["UV protection","Men aur women"],p:""},
+ {c:"Sunglasses",n:"Polarized Sunglasses",a:"sun",d:["Dhoop ki chamak kam","Drive ke liye behtar"],p:""},
+ {c:"Contacts",n:"Contact Lenses",a:"contact",d:["Daily aur monthly","Power ke saath"],p:""},
+ {c:"Repair",n:"Repair & Adjustment",a:"repair",d:["Frame seedha karwana","Nose pad aur screws"],p:""}
+];
+/* ======================== */
+
+var $=function(i){return document.getElementById(i)};
+function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function wa(t){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(t)}
 function fmt(n){return n.replace(/^(\d{4})(\d+)$/,"$1-$2")}
+var hello="Assalam o Alaikum, "+BRAND+". Mujhe order/inquiry karni hai.";
+document.title=BRAND+" – Taj Bagh, Lahore";
+document.querySelectorAll("[data-b]").forEach(function(e){e.textContent=BRAND});
+document.querySelectorAll("[data-wa]").forEach(function(e){e.href=wa(hello)});
+document.querySelectorAll("[data-call]").forEach(function(e){e.href="tel:+"+PHONE});
+$("ph").href="tel:+"+PHONE;$("ph").textContent=SHOWN;$("fp").textContent=SHOWN;$("tm").textContent=TIMING;
+$("accN").textContent=ACC;
+$("etB").href=wa("Assalam o Alaikum, "+BRAND+". Mujhe computerized eye test karwana hai. Barah-e-karam waqt bata dein.");
+$("payB").href=wa("Assalam o Alaikum, maine payment bhej di hai.\nNaam:\nItem:\nPayment method:\n(Screenshot isi chat mein bhej raha/rahi hoon)");
+var Q=encodeURIComponent(MAPQ);
+$("mf").src=MAPSRC||("https://maps.google.com/maps?q="+Q+"&output=embed");
+$("mp").href="https://www.google.com/maps/search/?api=1&query="+Q;
 
-/* ===== PAYMENT SECTION ===== */
-var sec=mk("section","hv");sec.id="hv-pay";
-var box=mk("div","hv-box");
-box.appendChild(mk("h2","","Payment"));
-box.appendChild(mk("p","s","Neeche diye gaye kisi bhi account mein payment bhej sakte hain."));
-var g=mk("div","hv-g");
-PAYS.forEach(function(p){
-  var c=mk("div","hv-c"),h=mk("div","h",p[0]);h.style.background=p[1];
-  var b=mk("div","b");
-  b.appendChild(mk("small","","Account title"));b.appendChild(mk("b","",NAME));
-  b.appendChild(mk("small","","Account number"));b.appendChild(mk("b","",fmt(NO)));
-  var cp=mk("button","","Number copy karein");cp.type="button";
-  cp.onclick=function(){
-    function ok(){cp.textContent="Copy ho gaya ✓";setTimeout(function(){cp.textContent="Number copy karein"},2000)}
-    try{navigator.clipboard.writeText(NO).then(ok,function(){cp.textContent=NO})}catch(e){cp.textContent=NO}};
-  b.appendChild(cp);c.appendChild(h);c.appendChild(b);g.appendChild(c)});
-box.appendChild(g);
-box.appendChild(mk("div","hv-n","Zaroori: Payment bhejne se pehle WhatsApp par order confirm karwa lein. Account ka naam "+NAME+" hi hona chahiye. Payment ke baad screenshot WhatsApp par bhej dein."));
-var a=mk("a","hv-b","Payment ka screenshot bhejein");
-a.href=w("Assalam o Alaikum, maine payment bhej di hai.\nNaam:\nItem:\nPayment method:\n(Screenshot isi chat mein bhej raha/rahi hoon)");
-a.target="_blank";a.rel="noopener";box.appendChild(a);
-sec.appendChild(box);
-var ft=document.querySelector("footer");
-if(ft)ft.parentNode.insertBefore(sec,ft);else document.body.appendChild(sec);
-
-/* side menu mein Payment ka link (agar side menu hai) */
-var dr=document.getElementById("drawer");
-if(dr){var ls=dr.querySelectorAll("a.l"),last=ls[ls.length-1];
-  var l=mk("a","l","Payment");l.href="#hv-pay";
-  l.addEventListener("click",function(){dr.classList.remove("open");var o=document.getElementById("ov");if(o)o.classList.remove("open")});
-  if(last)last.parentNode.insertBefore(l,last.nextSibling)}
-
-/* ===== ASSISTANT ===== */
-var btn=mk("button","","");btn.id="hvBtn";btn.setAttribute("aria-label","Assistant");
-btn.innerHTML='<svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>';
-var bx=mk("div","");bx.id="hvBx";bx.id="hvBox";
-bx.innerHTML='<div class="ch"><div>HD Vision Assistant<small>24/7 · turant jawab</small></div><button id="hvX" aria-label="Band karein">×</button></div><div id="hvMsgs"></div><div id="hvQ"></div><form id="hvF"><input id="hvI" placeholder="Apna sawal likhein..." autocomplete="off"><button>Bhejein</button></form>';
-document.body.appendChild(btn);document.body.appendChild(bx);
-var msgs=document.getElementById("hvMsgs");
-btn.onclick=function(){bx.classList.toggle("open")};
-document.getElementById("hvX").onclick=function(){bx.classList.remove("open")};
-window.openChat=function(){bx.classList.add("open")};
-function say(t,who,link){var m=mk("div","hv-m "+who,t);
-  if(link){m.appendChild(document.createElement("br"));var k=mk("a","","WhatsApp par baat karein");k.href=w("Assalam o Alaikum, "+BRAND+". Mujhe order/inquiry karni hai.");k.target="_blank";k.rel="noopener";m.appendChild(k)}
-  msgs.appendChild(m);msgs.scrollTop=1e5}
-function has(q,ws){return ws.some(function(x){return q.indexOf(x)>-1})}
-function price(m){return m.p?"Rs. "+m.p:"WhatsApp par pooch lein"}
-function find(q){return MENU.filter(function(m){
-  var ws=m.n.toLowerCase().split(/[^a-z]+/).filter(function(x){return x.length>3&&["lenses","frames","with"].indexOf(x)<0});
-  return ws.some(function(x){return q.indexOf(x)>-1})})}
-var cats=[];MENU.forEach(function(m){if(cats.indexOf(m.c)<0)cats.push(m.c)});
-function reply(q){
-  if(has(q,["payment","pay ","easypaisa","jazzcash","jazz","sadapay","nayapay","naya pay","sada pay","account"]))
-    return {t:"Payment ke tareeqe: "+PAYS.map(function(p){return p[0]}).join(", ")+".\nAccount title: "+NAME+"\nNumber: "+fmt(NO)+"\nPehle WhatsApp par order confirm karein, phir payment ka screenshot bhej dein.",l:1};
-  var f=find(q);
-  if(f.length)return {t:f.slice(0,2).map(function(m){return m.n+" ("+m.c+")\n"+m.d.join(", ")+"\nPrice: "+price(m)}).join("\n\n")+"\n\nOrder ke liye menu mein “Order” dabayein."};
-  if(has(q,["menu","products","kya kya","items","list"]))return {t:cats.length?"Hamare paas: "+cats.join(", ")+". Menu section mein har cheez ki detail aur price hai.":"Menu section mein saari cheezein dekh lein."};
-  if(has(q,["timing","waqt","time","khul","band","open"]))return {t:"Dukaan ka waqt: "+TIMING};
-  if(has(q,["address","kahan","location","rasta","map","jagah"]))return {t:"Hum Taj Bagh, Lahore mein hain. Neeche Map section mein rasta hai."};
-  if(has(q,["test","nazar","eye","check","power","nambar"]))return {t:"Computerized eye test dukaan par hota hai. Aa kar apna test karwa lein."};
-  if(has(q,["price","rate","qeemat","kitne","paise","cost"]))return {t:"Menu mein har cheez ka rate likha hai. Khaas frame ya lens ka rate WhatsApp par pooch lein.",l:1};
-  if(has(q,["order","chashma","buy","khareed","glasses"]))return {t:"Menu mein se item chunein aur “Order” dabayein, ya WhatsApp par likh dein."};
-  if(has(q,["job","career","naukri","cv","apply"]))return {t:"Careers section mein form bhar kar apply karein, phir CV WhatsApp par bhej dein."};
-  if(has(q,["number","phone","call","owner","bilal"]))return {t:"Owner: "+OWNER+"\nPhone/WhatsApp: "+SHOWN};
-  if(has(q,["salam","hello","assalam"]))return {t:"Walaikum Assalam! Main aap ki kya madad kar sakta hoon?"};
-  if(has(q,["shukriya","thanks","thank"]))return {t:"Aap ka shukriya! Koi aur sawal ho to poochein."};
-  return {t:"Is sawal ka jawab owner dein ge. Barah-e-karam WhatsApp par likhein.",l:1}}
-function ask(t){say(t,"u");var r=reply(t.toLowerCase()+" ");setTimeout(function(){say(r.t,"b",r.l)},400)}
-say("Assalam o Alaikum! Main "+BRAND+" ka assistant hoon. Dukaan, products, rates aur payment ke baare mein poochein.","b");
-["Menu","Timing","Address","Rate","Payment","Job"].forEach(function(t){
-  var b=mk("button","",t);b.type="button";b.onclick=function(){ask(t)};document.getElementById("hvQ").appendChild(b)});
-document.getElementById("hvF").onsubmit=function(e){e.preventDefault();var i=document.getElementById("hvI"),v=i.value.trim();if(v){ask(v);i.value=""}};
-})();
-</script>
-<style>
-#menuB,#drawer,#ov{display:none!important}
-#hvM{position:fixed;top:8px;right:14px;z-index:90;width:46px;height:46px;border:0;border-radius:12px;background:#0b2545;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px #0004}
-#hvM i{display:block;width:20px;height:2px;background:#fff;border-radius:2px;position:relative}
-#hvM i::before,#hvM i::after{content:"";position:absolute;left:0;width:20px;height:2px;background:#fff;border-radius:2px}
-#hvM i::before{top:-6px}#hvM i::after{top:6px}
-#hvO{position:fixed;inset:0;background:#0b254599;z-index:10001;opacity:0;visibility:hidden;transition:.3s}
-#hvO.on{opacity:1;visibility:visible}
-#hvD{position:fixed;top:0;bottom:0;right:0;width:min(310px,84vw);background:linear-gradient(170deg,#0b2545,#13406e);color:#fff;z-index:10002;transform:translateX(105%);transition:transform .3s;padding:20px;display:flex;flex-direction:column;gap:4px;overflow-y:auto;font-family:inherit}
-#hvD.on{transform:none}
-#hvD .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-weight:800}
-#hvD .x{background:#ffffff22;border:0;color:#fff;width:38px;height:38px;border-radius:50%;font-size:1.3rem;cursor:pointer}
-#hvD a.l{color:#fff;text-decoration:none;padding:13px 14px;border-radius:12px;font-weight:600}
-#hvD a.l:hover{background:#ffffff1c}
-#hvD a.l::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#d4af5a;margin-right:12px}
-#hvD a.b{display:block;text-align:center;margin-top:10px;padding:13px;border-radius:99px;font-weight:600;text-decoration:none;color:#fff;background:#1faa59}
-#hvD a.b.g{background:#d4af5a;color:#1a1405}
-</style>
-
-<script>
-(function(){
-function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
-var BR=typeof BRAND!=="undefined"?BRAND:"HD Vision Opticics";
-var PH=typeof PHONE!=="undefined"?PHONE:"923224377278";
-var items=[["Home",["top"]],["Menu aur Prices",["menu"]],["Careers",["careers"]],["Reviews",["reviews"]],
-  ["Rabta karein",["contact"]],["Dukaan ka rasta",["location"]],["Payment",["payment","hv-pay"]]];
-var btn=mk("button");btn.id="hvM";btn.type="button";
-btn.setAttribute("aria-label","Menu kholein");btn.setAttribute("aria-expanded","false");
-btn.appendChild(document.createElement("i"));
-var ov=mk("div");ov.id="hvO";
-var d=mk("aside");d.id="hvD";d.setAttribute("aria-label","Side menu");
-var dh=mk("div","dh");dh.appendChild(mk("span","",BR));
-var x=mk("button","x","×");x.type="button";x.setAttribute("aria-label","Band karein");dh.appendChild(x);d.appendChild(dh);
-function set(o){d.classList.toggle("on",o);ov.classList.toggle("on",o);btn.setAttribute("aria-expanded",o)}
-items.forEach(function(it){
-  var el=null;
-  for(var i=0;i<it[1].length&&!el;i++)el=document.getElementById(it[1][i]);
-  if(!el&&it[0]!=="Home")return;
-  var a=mk("a","l",it[0]);a.href="#";
-  a.addEventListener("click",function(e){
-    e.preventDefault();set(false);
-    setTimeout(function(){
-      if(it[0]==="Home")window.scrollTo({top:0,behavior:"smooth"});
-      else el.scrollIntoView({behavior:"smooth",block:"start"})},250)});
-  d.appendChild(a)});
-var w=mk("a","b","WhatsApp par order");
-w.href="https://wa.me/"+PH+"?text="+encodeURIComponent("Assalam o Alaikum, "+BR+". Mujhe order/inquiry karni hai.");
-w.target="_blank";w.rel="noopener";d.appendChild(w);
-var c=mk("a","b g","Call karein");c.href="tel:+"+PH;d.appendChild(c);
-btn.addEventListener("click",function(){set(true)});
-x.addEventListener("click",function(){set(false)});
-ov.addEventListener("click",function(){set(false)});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
-document.body.appendChild(btn);document.body.appendChild(ov);document.body.appendChild(d);
-})();
- </script>
+/* eye test machine (phoropter) drawing */
+var M='<rect x="40" y="14" width="220" height="26" rx="8"/><path d="M110 40v12M190 40v12"/><rect x="40" y="52" width="220" height="108" rx="16"/><circle cx="104" cy="106" r="36"/><circle cx="196" cy="106" r="36"/><circle cx="104" cy="106" r="22"/><circle cx="196" cy="106" r="22"/><path d="M104 84v44M82 106h44M196 84v44M174 106h44" stroke-width="2"/><circle cx="150" cy="70" r="7"/><circle cx="52" cy="106" r="7"/><circle cx="248" cy="106" r="7"/><path d="M150 160v46M110 216h80M150 206v10"/><path d="M60 226h40" stroke-width="3"/>';
+document.querySelectorAll(".mc").forEach(function(g){g
