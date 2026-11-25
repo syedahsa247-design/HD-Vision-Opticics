@@ -118,3 +118,59 @@ say("Assalam o Alaikum! Main "+BRAND+" ka assistant hoon. Dukaan, products, rate
 document.getElementById("hvF").onsubmit=function(e){e.preventDefault();var i=document.getElementById("hvI"),v=i.value.trim();if(v){ask(v);i.value=""}};
 })();
 </script>
+<style>
+#menuB,#drawer,#ov{display:none!important}
+#hvM{position:fixed;top:8px;right:14px;z-index:90;width:46px;height:46px;border:0;border-radius:12px;background:#0b2545;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px #0004}
+#hvM i{display:block;width:20px;height:2px;background:#fff;border-radius:2px;position:relative}
+#hvM i::before,#hvM i::after{content:"";position:absolute;left:0;width:20px;height:2px;background:#fff;border-radius:2px}
+#hvM i::before{top:-6px}#hvM i::after{top:6px}
+#hvO{position:fixed;inset:0;background:#0b254599;z-index:10001;opacity:0;visibility:hidden;transition:.3s}
+#hvO.on{opacity:1;visibility:visible}
+#hvD{position:fixed;top:0;bottom:0;right:0;width:min(310px,84vw);background:linear-gradient(170deg,#0b2545,#13406e);color:#fff;z-index:10002;transform:translateX(105%);transition:transform .3s;padding:20px;display:flex;flex-direction:column;gap:4px;overflow-y:auto;font-family:inherit}
+#hvD.on{transform:none}
+#hvD .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-weight:800}
+#hvD .x{background:#ffffff22;border:0;color:#fff;width:38px;height:38px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+#hvD a.l{color:#fff;text-decoration:none;padding:13px 14px;border-radius:12px;font-weight:600}
+#hvD a.l:hover{background:#ffffff1c}
+#hvD a.l::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#d4af5a;margin-right:12px}
+#hvD a.b{display:block;text-align:center;margin-top:10px;padding:13px;border-radius:99px;font-weight:600;text-decoration:none;color:#fff;background:#1faa59}
+#hvD a.b.g{background:#d4af5a;color:#1a1405}
+</style>
+
+<script>
+(function(){
+function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+var BR=typeof BRAND!=="undefined"?BRAND:"HD Vision Opticics";
+var PH=typeof PHONE!=="undefined"?PHONE:"923224377278";
+var items=[["Home",["top"]],["Menu aur Prices",["menu"]],["Careers",["careers"]],["Reviews",["reviews"]],
+  ["Rabta karein",["contact"]],["Dukaan ka rasta",["location"]],["Payment",["payment","hv-pay"]]];
+var btn=mk("button");btn.id="hvM";btn.type="button";
+btn.setAttribute("aria-label","Menu kholein");btn.setAttribute("aria-expanded","false");
+btn.appendChild(document.createElement("i"));
+var ov=mk("div");ov.id="hvO";
+var d=mk("aside");d.id="hvD";d.setAttribute("aria-label","Side menu");
+var dh=mk("div","dh");dh.appendChild(mk("span","",BR));
+var x=mk("button","x","×");x.type="button";x.setAttribute("aria-label","Band karein");dh.appendChild(x);d.appendChild(dh);
+function set(o){d.classList.toggle("on",o);ov.classList.toggle("on",o);btn.setAttribute("aria-expanded",o)}
+items.forEach(function(it){
+  var el=null;
+  for(var i=0;i<it[1].length&&!el;i++)el=document.getElementById(it[1][i]);
+  if(!el&&it[0]!=="Home")return;
+  var a=mk("a","l",it[0]);a.href="#";
+  a.addEventListener("click",function(e){
+    e.preventDefault();set(false);
+    setTimeout(function(){
+      if(it[0]==="Home")window.scrollTo({top:0,behavior:"smooth"});
+      else el.scrollIntoView({behavior:"smooth",block:"start"})},250)});
+  d.appendChild(a)});
+var w=mk("a","b","WhatsApp par order");
+w.href="https://wa.me/"+PH+"?text="+encodeURIComponent("Assalam o Alaikum, "+BR+". Mujhe order/inquiry karni hai.");
+w.target="_blank";w.rel="noopener";d.appendChild(w);
+var c=mk("a","b g","Call karein");c.href="tel:+"+PH;d.appendChild(c);
+btn.addEventListener("click",function(){set(true)});
+x.addEventListener("click",function(){set(false)});
+ov.addEventListener("click",function(){set(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
+document.body.appendChild(btn);document.body.appendChild(ov);document.body.appendChild(d);
+})();
+ </script>
