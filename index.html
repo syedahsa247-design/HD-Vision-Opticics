@@ -1,82 +1,77 @@
-<!-- ===== PAYMENT SECTION START ===== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080d">
+<title>Payment - HD Vision Opticics</title>
 <style>
-#payment{max-width:980px;margin:0 auto;padding:48px 20px;font-family:Sora,system-ui,sans-serif;color:#fff}
-#payment h2{font-size:2rem;font-weight:800;margin-bottom:6px}
-#payment .bar{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg,#e0212f,#ffc928,#2563ff);margin-bottom:14px}
-#payment .sub{color:#b8c0d8;margin-bottom:22px;line-height:1.6}
-#payment .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-#payment .card{background:var(--cd,#10162b);border:1px solid var(--ln,#25304f);border-radius:16px;padding:18px}
-#payment .card h3{font-size:1.1rem;margin-bottom:10px;color:#ffc928}
-#payment .lbl{font-size:.75rem;color:#8d97b5;margin-top:8px}
-#payment .val{font-weight:700;font-size:1rem}
-#payment .num{font-size:1.15rem;letter-spacing:1px}
-#payment button{margin-top:14px;width:100%;padding:11px;border:0;border-radius:999px;background:#2563ff;color:#fff;font-weight:700;font-family:inherit;font-size:.95rem;cursor:pointer}
-#payment button.done{background:#1faa59}
-#payment .note{margin-top:20px;padding:14px;border-radius:12px;border:1px dashed #25304f;color:#b8c0d8;font-size:.9rem;line-height:1.6}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,sans-serif;background:#07080d;color:#fff;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:40px 20px}
+a.back{color:#ffc928;text-decoration:none;font-weight:700}
+h1{font-size:2rem;font-weight:800;margin:18px 0 6px}
+.bar{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg,#e0212f,#ffc928,#2563ff);margin-bottom:14px}
+.sub{color:#b8c0d8;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:#10162b;border:1px solid #25304f;border-radius:16px;padding:18px}
+.card h3{color:#ffc928;margin-bottom:10px}
+.lbl{font-size:.75rem;color:#8d97b5;margin-top:8px}
+.val{font-weight:700}
+.num{font-size:1.15rem;letter-spacing:1px}
+button{margin-top:14px;width:100%;padding:11px;border:0;border-radius:999px;background:#2563ff;color:#fff;font-weight:700;font-size:.95rem;cursor:pointer}
+button.done{background:#1faa59}
+.note{margin-top:20px;padding:14px;border-radius:12px;border:1px dashed #25304f;color:#b8c0d8;font-size:.9rem}
 </style>
-
-<section id="payment">
-  <h2>Payment</h2>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← Wapas Home</a>
+  <h1>Payment</h1>
   <div class="bar"></div>
-  <p class="sub">Aap in mein se kisi bhi account mein payment bhej sakte hain. Payment karne ke baad screenshot WhatsApp par bhej dein.</p>
+  <p class="sub">Aap in mein se kisi bhi account mein payment bhej sakte hain. Payment ke baad screenshot WhatsApp par bhej dein.</p>
 
   <div class="grid">
-    <div class="card">
-      <h3>Easypaisa</h3>
-      <div class="lbl">Account Name</div>
-      <div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div>
-      <div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
-    </div>
+    <div class="card"><h3>Easypaisa</h3>
+      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div><div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
 
-    <div class="card">
-      <h3>JazzCash</h3>
-      <div class="lbl">Account Name</div>
-      <div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div>
-      <div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
-    </div>
+    <div class="card"><h3>JazzCash</h3>
+      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div><div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
 
-    <div class="card">
-      <h3>NayaPay</h3>
-      <div class="lbl">Account Name</div>
-      <div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div>
-      <div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
-    </div>
+    <div class="card"><h3>NayaPay</h3>
+      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div><div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
 
-    <div class="card">
-      <h3>SadaPay</h3>
-      <div class="lbl">Account Name</div>
-      <div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div>
-      <div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button>
-    </div>
+    <div class="card"><h3>SadaPay</h3>
+      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
+      <div class="lbl">Number</div><div class="val num">03224377278</div>
+      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
   </div>
 
   <div class="note">Payment bhejne se pehle account name <b>Syed Bilal Hussian</b> zaroor check kar lein.</div>
-</section>
+</div>
 
 <script>
 function copyNum(btn,num){
   var done=function(){
     var old=btn.textContent;
-    btn.textContent="Copied ✓";
-    btn.classList.add("done");
+    btn.textContent="Copied ✓";btn.classList.add("done");
     setTimeout(function(){btn.textContent=old;btn.classList.remove("done")},1800);
   };
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(num).then(done).catch(done);
   }else{
-    var t=document.createElement("textarea");
-    t.value=num;document.body.appendChild(t);t.select();
+    var t=document.createElement("textarea");t.value=num;
+    document.body.appendChild(t);t.select();
     try{document.execCommand("copy")}catch(e){}
     document.body.removeChild(t);done();
   }
 }
 </script>
-<!-- ===== PAYMENT SECTION END ===== -->
+</body>
+</html>
