@@ -17,7 +17,6 @@ a{color:inherit}
 .bgc{position:fixed;inset:0;z-index:-1;overflow:hidden}
 .chart{position:absolute;right:-40px;top:90px;width:min(340px,82vw);color:var(--nv);opacity:.06;font-family:Sora,sans-serif;font-weight:800;text-anchor:middle;fill:currentColor}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
-/* top bar */
 .top{position:sticky;top:0;z-index:20;background:#ffffffee;backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
 .top .in{max-width:980px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--nv);text-decoration:none}
@@ -26,7 +25,6 @@ a{color:inherit}
 #menuB{background:var(--nv);border:0;border-radius:12px;width:44px;height:44px;cursor:pointer;display:grid;place-items:center}
 #menuB span,#menuB span::before,#menuB span::after{display:block;width:20px;height:2px;background:#fff;border-radius:2px;content:"";position:relative}
 #menuB span::before{position:absolute;top:-6px}#menuB span::after{position:absolute;top:6px}
-/* side drawer */
 #ov{position:fixed;inset:0;background:#0b254588;z-index:40;opacity:0;visibility:hidden;transition:.3s}
 #ov.open{opacity:1;visibility:visible}
 #drawer{position:fixed;top:0;bottom:0;right:0;width:min(310px,84vw);background:linear-gradient(170deg,var(--nv),var(--nv2));color:#fff;z-index:41;transform:translateX(105%);transition:transform .3s;padding:20px;display:flex;flex-direction:column;gap:4px;overflow-y:auto}
@@ -37,7 +35,6 @@ a{color:inherit}
 #drawer a.l:hover{background:#ffffff1c}
 #drawer a.l::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gd);margin-right:12px}
 #drawer .btn{margin-top:10px}
-/* hero */
 .hero{background:linear-gradient(150deg,var(--nv),var(--nv2) 65%,#0e5a66);color:#fff;position:relative;overflow:hidden}
 .hero .chart{color:#fff;opacity:.08;right:-60px;top:10px}
 .hero .wrap{position:relative;padding-top:52px;padding-bottom:64px}
@@ -56,8 +53,8 @@ h2::after{content:"";display:block;width:60px;height:4px;border-radius:4px;margi
 .tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:4px}
 .tabs button{background:#fff;color:var(--mu);border:1px solid var(--ln);padding:8px 16px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap}
 .tabs button.on{background:var(--nv);color:#fff;border-color:var(--nv)}
-.grid{display:grid;gap:14px;grid-template-columns:1fr}
-@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.grid,.pays{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.grid,.pays{grid-template-columns:1fr 1fr}}
 .card{background:#fff;border:1px solid var(--ln);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 22px #0b25450d}
 .art{height:120px;border-radius:14px;background:linear-gradient(135deg,var(--nv),var(--tl));color:var(--gd);display:grid;place-items:center;overflow:hidden}
 .art svg{width:120px}.art img{width:100%;height:100%;object-fit:cover}
@@ -68,6 +65,13 @@ h2::after{content:"";display:block;width:60px;height:4px;border-radius:4px;margi
 .price{font-weight:800;color:var(--tl)}
 .card button{background:var(--nv);color:#fff;border:0;padding:9px 20px;border-radius:99px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
 .card button:hover{background:var(--wa)}
+.pc{background:#fff;border:1px solid var(--ln);border-radius:20px;overflow:hidden;box-shadow:0 8px 22px #0b25450d}
+.pc .hd{padding:12px 16px;color:#fff;font-weight:800;font-size:1.05rem}
+.pc .bd{padding:14px 16px;display:grid;gap:2px}
+.pc small{color:var(--mu);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:6px}
+.pc b{font-size:1.1rem;color:var(--nv)}
+.pc button{margin-top:10px;background:var(--iv);border:1px solid var(--ln);color:var(--nv);padding:9px;border-radius:12px;font:inherit;font-weight:600;cursor:pointer}
+.note{background:#fff7e0;border:1px solid var(--gd);border-radius:14px;padding:14px 16px;margin:16px 0;font-size:.9rem}
 .panel{background:#fff;border:1px solid var(--ln);border-radius:20px;padding:22px;box-shadow:0 8px 22px #0b25450d}
 form{display:grid;gap:12px}
 label{font-size:.8rem;color:var(--mu);font-weight:600}
@@ -78,8 +82,8 @@ textarea{min-height:90px;resize:vertical}
 .job b{display:block;color:var(--nv)}.job span{font-size:.85rem;color:var(--mu)}
 .rev{border-left:4px solid var(--gd);background:#fff;padding:14px 16px;border-radius:0 14px 14px 0;margin-bottom:10px}
 .rev b{color:var(--nv)}
-.contact{background:linear-gradient(150deg,var(--nv),var(--nv2));color:#fff;border-radius:24px;padding:28px}
-.contact h2{color:#fff}.contact .sub{color:#cfdcea}
+.contact,.ask{background:linear-gradient(150deg,var(--nv),var(--nv2));color:#fff;border-radius:24px;padding:28px}
+.contact h2,.ask h2{color:#fff}.contact .sub,.ask .sub{color:#cfdcea}
 .contact .r{margin-bottom:12px}
 .contact .r b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gd)}
 .contact .r span,.contact .r a{font-size:1.3rem;font-weight:800;text-decoration:none}
@@ -89,20 +93,19 @@ footer{margin-top:56px;background:var(--nv);color:#b9c8dc;text-align:center;padd
 .fab{position:fixed;bottom:16px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:0;cursor:pointer;z-index:30;box-shadow:0 8px 22px #0b254566}
 .fab svg{width:28px;height:28px;fill:#fff}
 #waF{left:16px;background:var(--wa)}#chatB{right:16px;background:var(--tl)}
-#chat{position:fixed;right:12px;bottom:84px;width:min(360px,calc(100vw - 24px));height:min(460px,70vh);background:#fff;border:1px solid var(--ln);border-radius:20px;z-index:31;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px #0b254544}
+#chat{position:fixed;right:12px;bottom:84px;width:min(360px,calc(100vw - 24px));height:min(480px,72vh);background:#fff;border:1px solid var(--ln);border-radius:20px;z-index:31;display:none;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px #0b254544}
 #chat.open{display:flex}
 .ch{background:linear-gradient(90deg,var(--nv),var(--tl));color:#fff;padding:12px 16px;font-weight:700;display:flex;justify-content:space-between}
 .ch small{display:block;font-weight:400}
 .ch button{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
 #msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:var(--iv)}
-.m{max-width:85%;padding:9px 13px;border-radius:14px;font-size:.9rem}
+.m{max-width:88%;padding:9px 13px;border-radius:14px;font-size:.9rem;white-space:pre-line}
 .m.b{background:#fff;border:1px solid var(--ln);align-self:flex-start}.m.u{background:var(--nv);color:#fff;align-self:flex-end}
 .m a{color:var(--tl);font-weight:600}
 .q{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px}
 .q button{background:#fff;border:1px solid var(--tl);color:var(--tl);padding:5px 11px;border-radius:99px;font:inherit;font-size:.78rem;cursor:pointer}
 .cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--ln)}
 .cf input{padding:9px 12px}.cf button{background:var(--nv);color:#fff;border:0;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
-/* welcome screen */
 #splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;padding:24px;color:#fff;background:radial-gradient(circle at 80% 10%,#0b7f7a66,transparent 45%),linear-gradient(160deg,var(--nv),var(--nv2));animation:sOut .6s ease 3.5s forwards}
 #splash.hide{animation:none;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s}
 @keyframes sOut{to{opacity:0;visibility:hidden;pointer-events:none}}
@@ -147,6 +150,7 @@ footer{margin-top:56px;background:var(--nv);color:#b9c8dc;text-align:center;padd
   <a class="l" href="#reviews" id="dRev">Reviews</a>
   <a class="l" href="#contact">Rabta karein</a>
   <a class="l" href="#location">Dukaan ka rasta</a>
+  <a class="l" href="#payment">Payment</a>
   <a class="btn wa" id="dWa" href="#" target="_blank" rel="noopener">WhatsApp par order</a>
   <a class="btn gd" id="dCall" href="#">Call karein</a>
 </aside>
@@ -220,6 +224,22 @@ footer{margin-top:56px;background:var(--nv);color:#b9c8dc;text-align:center;padd
   <iframe class="map" title="Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapF"></iframe>
   <p style="margin-top:14px"><a class="btn tl" id="mapL" target="_blank" rel="noopener" href="#">Google Maps mein kholein</a></p>
 </section>
+
+<section id="payment">
+  <h2>Payment</h2>
+  <p class="sub">Neeche diye gaye kisi bhi account mein payment bhej sakte hain.</p>
+  <div class="pays" id="payList"></div>
+  <div class="note"><b>Zaroori:</b> Payment bhejne se pehle WhatsApp par order confirm karwa lein. Account ka naam <b id="accN2"></b> hi hona chahiye. Payment ke baad screenshot WhatsApp par bhej dein.</div>
+  <a class="btn wa" id="payWa" href="#" target="_blank" rel="noopener">Payment ka screenshot bhejein</a>
+</section>
+
+<section>
+  <div class="ask">
+    <h2>Koi sawal hai?</h2>
+    <p class="sub">Hamara assistant dukaan, products, rates aur payment ke baare mein turant jawab deta hai.</p>
+    <button class="btn gd" id="askB">Assistant se poochein</button>
+  </div>
+</section>
 </main>
 
 <footer>© <span data-b>HD Vision Opticics</span>, Taj Bagh, Lahore · Syed Bilal · <span id="footPhone"></span></footer>
@@ -227,16 +247,15 @@ footer{margin-top:56px;background:var(--nv);color:#b9c8dc;text-align:center;padd
 <a class="fab" id="waF" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9-3.1-1.3-5-4.5-5.2-4.7-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.5Z"/></svg>
 </a>
-<button class="fab" id="chatB" aria-label="Chat support"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></button>
+<button class="fab" id="chatB" aria-label="Assistant"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></button>
 
-<div id="chat" role="dialog" aria-label="Chat support">
-  <div class="ch"><div>Chat Support<small>24/7 · turant jawab</small></div><button id="chatX" aria-label="Band karein">×</button></div>
+<div id="chat" role="dialog" aria-label="Assistant">
+  <div class="ch"><div>HD Vision Assistant<small>24/7 · turant jawab</small></div><button id="chatX" aria-label="Band karein">×</button></div>
   <div id="msgs"></div>
   <div class="q" id="quick"></div>
-  <form class="cf" id="chatF"><input id="chatI" placeholder="Sawal likhein..." autocomplete="off"><button>Bhejein</button></form>
+  <form class="cf" id="chatF"><input id="chatI" placeholder="Apna sawal likhein..." autocomplete="off"><button>Bhejein</button></form>
 </div>
 
-<!-- 1) Welcome screen band karne ka code -->
 <script>
 (function(){
   var s=document.getElementById("splash");
@@ -247,14 +266,20 @@ footer{margin-top:56px;background:var(--nv);color:#b9c8dc;text-align:center;padd
 })();
 </script>
 
-<!-- 2) Baqi website -->
 <script>
 /* ====== EDIT THESE ====== */
-var BRAND="HD Vision Opticics";      // naam badalna ho to sirf yahan badlein
+var BRAND="HD Vision Opticics";
 var OWNER="Syed Bilal", PHONE="923224377278", SHOWN="0322-4377278";
 var TIMING="Rozana subah 8 AM se raat 10 PM tak";
 var SHOW_REVIEWS=true;               // true = reviews nazar ayen, false = band
 var GOOGLE_FORM="";                  // optional: Google Form ka link
+var ACC_NAME="Syed Bilal Hussian", ACC_NO="03224377278";
+var PAYS=[
+  {n:"Easypaisa",c:"#2e9e4f",name:ACC_NAME,no:ACC_NO},
+  {n:"JazzCash",c:"#d71920",name:ACC_NAME,no:ACC_NO},
+  {n:"SadaPay",c:"#0e9f8a",name:ACC_NAME,no:ACC_NO},
+  {n:"NayaPay",c:"#5b2bd6",name:ACC_NAME,no:ACC_NO}
+];
 var REVIEWS=[                        // approve kiye hue reviews yahan dalein
   // {n:"Ali", s:5, t:"Bohat acha experience."}
 ];
@@ -281,108 +306,4 @@ var MENU=[
 
 var $=function(i){return document.getElementById(i)};
 function wa(t){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(t)}
-var hello="Assalam o Alaikum, "+BRAND+". Mujhe order/inquiry karni hai.";
-var Q=encodeURIComponent(BRAND+" Taj Bagh Lahore");
-document.title=BRAND+" – Taj Bagh, Lahore";
-document.querySelectorAll("[data-b]").forEach(function(e){e.textContent=BRAND});
-["heroWa","orderWa","waF","sWa","dWa"].forEach(function(i){$(i).href=wa(hello)});
-$("phoneLink").href=$("dCall").href="tel:+"+PHONE;$("phoneLink").textContent=SHOWN;
-$("ownerName").textContent=OWNER;$("footPhone").textContent=SHOWN;$("timing").textContent=TIMING;
-$("mapF").src="https://maps.google.com/maps?q="+Q+"&output=embed";
-$("mapL").href="https://www.google.com/maps/search/?api=1&query="+Q;
-$("sMenu").onclick=function(){location.hash="menu"};
-$("sChat").onclick=function(){openChat()};
-
-/* background: naam eye-chart ki tarah */
-var W=BRAND.toUpperCase().split(" "),U=BRAND.toUpperCase();
-var rows=[[W[0]||"",96,110],[W[1]||"",62,190],[W[2]||"",40,245],[U,18,285],[U,12,310]];
-document.querySelectorAll(".cg").forEach(function(g){
-  g.innerHTML=rows.map(function(r){return '<text x="200" y="'+r[2]+'" font-size="'+r[1]+'">'+r[0]+'</text>'}).join("")});
-
-/* side menu */
-function drawer(o){$("drawer").classList.toggle("open",o);$("ov").classList.toggle("open",o);$("menuB").setAttribute("aria-expanded",o)}
-$("menuB").onclick=function(){drawer(true)};
-$("dX").onclick=$("ov").onclick=function(){drawer(false)};
-document.querySelectorAll("#drawer a").forEach(function(a){a.addEventListener("click",function(){drawer(false)})});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")drawer(false)});
-
-/* menu */
-function art(c){var s={
- "Eye Test":'<path d="M6 40c18-26 90-26 108 0-18 26-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#07080d">
-<title>Payment - HD Vision Opticics</title>
-<style>
-*{box-sizing:border-box;margin:0}
-body{font-family:system-ui,sans-serif;background:#07080d;color:#fff;line-height:1.6}
-.wrap{max-width:980px;margin:0 auto;padding:40px 20px}
-a.back{color:#ffc928;text-decoration:none;font-weight:700}
-h1{font-size:2rem;font-weight:800;margin:18px 0 6px}
-.bar{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg,#e0212f,#ffc928,#2563ff);margin-bottom:14px}
-.sub{color:#b8c0d8;margin-bottom:22px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.card{background:#10162b;border:1px solid #25304f;border-radius:16px;padding:18px}
-.card h3{color:#ffc928;margin-bottom:10px}
-.lbl{font-size:.75rem;color:#8d97b5;margin-top:8px}
-.val{font-weight:700}
-.num{font-size:1.15rem;letter-spacing:1px}
-button{margin-top:14px;width:100%;padding:11px;border:0;border-radius:999px;background:#2563ff;color:#fff;font-weight:700;font-size:.95rem;cursor:pointer}
-button.done{background:#1faa59}
-.note{margin-top:20px;padding:14px;border-radius:12px;border:1px dashed #25304f;color:#b8c0d8;font-size:.9rem}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <a class="back" href="index.html">← Wapas Home</a>
-  <h1>Payment</h1>
-  <div class="bar"></div>
-  <p class="sub">Aap in mein se kisi bhi account mein payment bhej sakte hain. Payment ke baad screenshot WhatsApp par bhej dein.</p>
-
-  <div class="grid">
-    <div class="card"><h3>Easypaisa</h3>
-      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div><div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
-
-    <div class="card"><h3>JazzCash</h3>
-      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div><div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
-
-    <div class="card"><h3>NayaPay</h3>
-      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div><div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
-
-    <div class="card"><h3>SadaPay</h3>
-      <div class="lbl">Account Name</div><div class="val">Syed Bilal Hussian</div>
-      <div class="lbl">Number</div><div class="val num">03224377278</div>
-      <button onclick="copyNum(this,'03224377278')">Copy Number</button></div>
-  </div>
-
-  <div class="note">Payment bhejne se pehle account name <b>Syed Bilal Hussian</b> zaroor check kar lein.</div>
-</div>
-
-<script>
-function copyNum(btn,num){
-  var done=function(){
-    var old=btn.textContent;
-    btn.textContent="Copied ✓";btn.classList.add("done");
-    setTimeout(function(){btn.textContent=old;btn.classList.remove("done")},1800);
-  };
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(num).then(done).catch(done);
-  }else{
-    var t=document.createElement("textarea");t.value=num;
-    document.body.appendChild(t);t.select();
-    try{document.execCommand("copy")}catch(e){}
-    document.body.removeChild(t);done();
-  }
-}
-</script>
-</body>
-</html>
+var hello="Assalam o Alaikum, "+BRA
